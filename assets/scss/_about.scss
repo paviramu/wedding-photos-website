@@ -1,0 +1,618 @@
+/*----------------------------------------*/
+/*  About Style 1
+/*----------------------------------------*/
+.about-1 {
+    .section-titleV1 {
+        text-align: left;
+        padding-left: 0px;
+    }
+    
+}
+
+
+
+/*------------- About Style 1 END -------------*/
+
+
+
+
+
+
+/*----------------------------------------*/
+/*  About Style 2
+/*----------------------------------------*/
+
+.a3-img {
+    position: relative;
+    text-align: right;
+    img.a3img-1 {
+        position: absolute;
+        left: -120px;
+        top: 0;
+        max-height: 518px;
+        margin-bottom: 15px;
+    }
+    img.a3img-2,
+    img.a3img-3  {
+        position: relative;
+        max-height: 252px;
+        margin-bottom: 15px;
+    }
+}
+
+
+/*------------- About Style 2 END -------------*/
+
+
+/*----------------------------------------*/
+/*  About Style 3
+/*----------------------------------------*/
+.about3-text {
+    h3 {
+        font-size: 36px;
+        color: $elementsColor;
+        letter-spacing: 0px;
+        font-weight: 400;
+        line-height: 44px;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '';
+            width: 500px;
+            height: 2px;
+            background-color: $primaryColor;
+            left: 0;
+            bottom: -5px;
+        }
+    }
+    p {
+        font-size: 16px;
+        letter-spacing: 0px;
+        color: $primaryColor;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+}
+
+.about3-img {
+    position: relative;
+    text-align: right;
+    img {}
+    img.a3img-1 {
+        position: absolute;
+        left: -120px;
+        top: 5px;
+        width: 100%;
+        z-index: -1;
+    }
+    img.a3img-2 {
+        max-height: 378px;
+    }
+    
+}
+
+/*------------- About Style 3 END -------------*/
+
+
+/*----------------------------------------*/
+/*  About Style 4
+/*----------------------------------------*/
+
+.about-8 {
+    overflow: hidden;
+    .section-titleV1 {
+        text-align: left;
+        padding-left: 0;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    
+}
+.about-8 {
+    .a8-img {
+        position: relative;
+        text-align: center;
+        img {
+            max-width: 450px;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            height: 118%;
+            width: 120%;
+            background-image: url(../img/shape/about-shape-1.png);
+            top: -50px;
+            right: -88px;
+            background-size: 100% 100%;
+            z-index: -1;
+        }
+    }
+}
+.profoSkill {
+    position: relative;
+    padding: 0px;
+    margin: 0 auto;
+    width: 100%;
+    li {
+        position: relative;
+        margin-bottom: 35px;
+        padding: 0;
+        list-style-type: none;
+        p {
+            font-size: 16px;
+            letter-spacing: 0px;
+            color: #2b2941;
+            font-weight: 500;
+            line-height: 24px;
+            padding-bottom: 12px;
+        }
+        .bar_container,
+        .bar {
+            position: absolute;
+            left: 0;
+            height: 15px;
+            border-radius: 5px;
+            content: "";
+        }
+        .bar_container {
+            bottom: -8px;
+            width: 100%;
+            background-color: #ebebed;
+            text-align: right;
+        }
+        .bar {
+            top: 0;
+            background-color: $elementsColor;
+        }
+        .pct {
+            position: absolute;
+            top: -25px;
+            right: 0;
+            opacity: 0;
+            @include transition(all,.3s,linear);
+            font-size: 16px;
+            letter-spacing: 0px;
+            color: #2b2941;
+            font-weight: 500;
+            line-height: 24px;
+            padding-bottom: 12px;
+        }
+    }
+}
+
+/*------------- About Style 4 END -------------*/
+
+/*----------------------------------------*/
+/*  About Style 5
+/*----------------------------------------*/
+.about14-1 {
+    position: relative;
+    overflow: hidden;
+    .section-text {
+        margin: 100px auto;
+        padding: 60px 0px;
+    }
+}
+
+
+.about14-img {
+    padding: 100px 0px;
+    margin-right: -60px;
+    img {
+        width: 100%;
+    }
+    img.a14bg-1 {
+        position: absolute;
+        right: -120px;
+        top: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        z-index: -1;
+    }
+}
+
+.about14-img.a4ialt {
+    margin-left: -60px;
+    margin-right: 0px;
+}
+
+.about14-img.a4ialt {
+    img.a14-bg {
+        margin-left: -120px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.about14-2 {
+    position: relative;
+    overflow: hidden;
+    .section-text {
+        margin: 80px auto;
+        padding: 50px 0px;
+        h3 {
+            font-size: 36px;
+            font-family: $quaternaryFont;
+            letter-spacing: 0px;
+            line-height: 46px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+/*------------- About Style 5 END -------------*/
+
+/*----------------------------------------*/
+/*  About Style 6
+/*----------------------------------------*/
+.about18-area {}
+
+.about18-img {
+    text-align: left;
+    img {
+        &:first-child {
+            max-width: 400px;
+        }
+        &:nth-child(2) {
+            position: absolute;
+            top: 35px;
+            right: 0;
+            max-width: 300px;
+            box-shadow: 0px 0px 40px 0px rgba(23, 21, 56, 0.55);
+        }
+        &:nth-child(3) {
+            position: absolute;
+            right: 50px;
+            bottom: 25px;
+            max-width: 300px;
+            box-shadow: 0px 0px 40px 0px rgba(23, 21, 56, 0.55);
+        }
+    }
+}
+
+.about18-text {
+    p {
+        color: $primaryColor;
+    }
+    .section-titleV2alt {
+        margin-bottom: 0;
+        text-align: left;
+        padding-bottom: 0;
+    }
+}
+
+/*------------- About Style 6 END -------------*/
+
+/*----------------------------------------*/
+/*  About Style 8
+/*----------------------------------------*/
+// .about-8 {
+//     .section-titleV1 {
+//         p {
+//             color: $secondaryColor;
+//         }
+//         h3 {
+//             color: $secondaryColor;
+//         }
+//     }
+// }
+
+
+
+/*------------- About Style 8 END -------------*/
+
+/*----------------------------------------*/
+/*  Dedicated Area Style 1
+/*----------------------------------------*/
+
+
+.dedicated-area {
+    position: relative;
+    background-color: $secondaryColor;
+    .section-text {
+        margin-top: 75px;
+        .section-titleV1 {
+            text-align: left;
+            padding-left: 0px;
+        }
+    }
+}
+.dedicated-a-img {
+    position: relative;
+    margin-left: -220px;
+    img {
+        width: 100%;
+    }
+    .section-text {
+        margin: 30px auto;
+        padding: 20px;
+    }
+}
+
+/*------------- Dedicated Area Style 1 END -------------*/
+
+
+
+
+
+
+/*----------------------------------------*/
+/*  Pretty Photography Style 1
+/*----------------------------------------*/
+.pretty-photography {
+    position: relative;
+    background-image: url(../img/bg/pretty-photo-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    &::before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #1a1a1a;
+        opacity: .90;
+    }
+    .ppgrhy-text {
+        position: relative;
+        text-align: center;
+        max-width: 860px;
+        margin: 15px auto;
+        h3 {
+            color: $primaryColor;
+            font-size: 40px;
+            letter-spacing: 0px;
+            font-weight: 500;
+            line-height: 52px;
+            margin-bottom: 25px;
+        }
+        p {
+            color: $primaryColor;
+            font-size: 20px;
+            letter-spacing: 0px;
+            font-weight: 300;
+        }
+        a {
+            position: relative;
+            display: inline-block;
+            color: $primaryColor;
+            font-size: 18px;
+            letter-spacing: 0px;
+            font-weight: 400;
+            border: 1px solid $primaryColor;
+            padding: 8px 25px;
+            border-radius: 25px;
+            margin-top: 120px;
+            &:before {
+                position: absolute;
+                content: '';
+                height: 80px;
+                width: 1px;
+                background-color: $primaryColor;
+                bottom: 65px;
+                left: 50%;
+            }
+        }
+    }
+}
+
+/*------------- Pretty Photography Style 1 END -------------*/
+
+
+
+
+
+
+
+/*----------------------------------------*/
+/*  About Page Style 1
+/*----------------------------------------*/
+.about-page-area {
+    padding: 120px 0px;
+}
+
+.about-p1-top {
+    .section-titleV1 {
+        text-align: left;
+        padding-left: 0px;
+        p {
+            color: $primaryColor;
+        }
+        
+    }
+    .section-text {
+        p {
+            color: $primaryColor;
+        }
+    }
+}
+
+.apa-1-2nd-section-left {
+    position: relative;
+    background-color: $elementsColor;
+    padding: 32px;
+    margin: 120px auto;
+    p {
+        font-size: 24px;
+        font-style: italic;
+        color: $primaryColor;
+        line-height: 34px;
+        padding: 12px 0px;
+        max-width: 285px;
+    }
+}
+
+
+.apa-1-2nd-section-right {
+    position: relative;
+    margin: 140px auto;
+    p {
+        color: $primaryColor;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+}
+
+.apa-1-3rd-section-left {
+    .section-titleV1 {
+        text-align: left;
+        padding-left: 0px;
+    }
+}
+/*------------- About Page Style 1 END -------------*/
+
+
+/*----------------------------------------*/
+/*  About Page Style 2
+/*----------------------------------------*/
+
+.apa-2-3rd-section-left {
+    position: relative;
+    max-width: 650px;
+    .section-titleV1 {
+        text-align: left;
+        padding-left: 0px;
+        h3 {
+            font-size: 35px;
+        }
+    }
+}
+
+.apa-2-skill-right {
+    position: relative;
+    margin: 25px auto;
+    ul.profoSkill {
+        li {
+            p {
+                color: $primaryColor;
+            }
+            .pct {
+                color: $primaryColor;
+            }
+        }
+        
+    }
+}
+
+.apa-2-skill-right .profoSkill li:last-child {
+    margin-bottom: 0px;
+}
+
+.apa-2-skill-right {
+    margin-bottom: 0px;
+}
+
+.team-area .section-titleV1.ta2 {
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.at2-box {
+    margin-bottom: 40px;
+}
+/*------------- About Page Style 2 END -------------*/
+
+
+/*----------------------------------------*/
+/*  About Page Style 3
+/*----------------------------------------*/
+
+
+.single-ap3-ttexx {
+    position: relative;
+    max-width: 380px;
+    margin: 25px auto;
+    h4 {
+        font-size: 30px;
+        line-height: 36px;
+        color: $primaryColor;
+        letter-spacing: 0px;
+        font-weight: 500;
+        margin: 20px auto;
+    }
+    p {
+        font-size: 16px;
+        color: $primaryColor;
+        line-height: 24px;
+        margin: 15px auto;
+    }
+}
+
+.about-p-our-story {
+    position: relative;
+    margin: 25px auto;
+    text-align: center;
+    .section-titleV1 {
+        max-width: 100%;
+        text-align: left;
+        padding-left: 0px;
+    }
+    .section-text {
+        text-align: left;
+        p {
+            color: $primaryColor;
+            
+        }
+    }
+}
+
+
+/*------------- About Page Style 3 END -------------*/
+
+
+
+/*----------------------------------------*/
+/*  Way Of Photography Section
+/*----------------------------------------*/
+.way-of-photography {
+    position: relative;
+    background-image: url(../img/bg/wop-bg.jpg);
+    background-size: cover;
+    padding: 80px 0px;
+    overflow: hidden;
+    &:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #1a1a1a;
+        opacity: .85;
+    }
+}
+.wop-text {
+    position: relative;
+    margin: 25px auto;
+    text-align: center;
+    max-width: 940px;
+    padding: 10px;
+    z-index: 1;
+    h4 {
+        font-size: 36px;
+        letter-spacing: 0px;
+        color: $primaryColor;
+        font-weight: 400;
+        line-height: 44px;
+        margin: 25px auto;
+    }
+    p {
+        font-size: 24px;
+        color: $primaryColor;
+        font-weight: 300;
+        line-height: 32px;
+        margin: 25px auto;
+        border-bottom: 1px solid #9c9c9c;
+        padding-bottom: 25px;
+    }
+}
+
+/*------------- Way Of Photography Section END -------------*/

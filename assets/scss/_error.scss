@@ -1,0 +1,178 @@
+/*----------------------------------------*/
+/*  Error Section
+/*----------------------------------------*/
+.error-wrapper {
+    position: relative;
+}
+.error-text {
+    position: relative;
+    max-width: 680px;
+    margin: 25px auto;
+    text-align: center;
+    padding: 25px;
+    z-index: 1;
+    img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    h2 {
+        font-size: 225px;
+        line-height: 240px;
+        color: $primaryColor;
+        letter-spacing: 0px;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 80px;
+        letter-spacing: 0px;
+        color: $primaryColor;
+        font-weight: 600;
+        line-height: 100px;
+    }
+    p {
+        font-size: 34px;
+        color: $primaryColor;
+        line-height: 40px;
+    }
+    a.btn-style-1 {
+        margin-top: 40px;
+        text-transform: uppercase;
+    }
+    
+}
+
+/*------------- Error Section END -------------*/
+
+
+
+/*----------------------------------------*/
+/*  Coming Soon Section
+/*----------------------------------------*/
+.coming-soon-area {
+    position: relative;
+    background-image: url(../img/bg/coming-Soon.jpg);
+    background-size: 100% 100%;
+    min-height: 625px;
+    padding: 120px 0px 50px;
+    text-align: center;
+    &:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background-color: #1a1a1a;
+        left: 0;
+        top: 0;
+        opacity: .75;
+    }
+}
+
+.c-son-title {
+    position: relative;
+    margin: 36px auto;
+    h3 {
+        font-size: 48px;
+        letter-spacing: 0px;
+        color: $primaryColor;
+        font-weight: 600;
+        line-height: 60px;
+    }
+    p {
+        font-size: 22px;
+        letter-spacing: 0px;
+        color: $primaryColor;
+        font-weight: 400;
+        line-height: 34px;
+        max-width: 885px;
+        margin: 10px auto;
+        padding: 15px;
+    }
+}
+
+.countdown-wrapper {
+    position: relative;
+}
+
+.countdown {
+    position: relative;
+    .cdown {
+        position: relative;
+        display: inline-block;
+        max-width: 400px;
+        width: 100px;
+        height: 100px;
+        border: 2px solid $primaryColor;
+        border-radius: 5px;
+        text-align: center;
+        padding-top: 12px;
+        margin: 10px;
+        .time-count {
+            font-weight: 500;
+            color: $primaryColor;
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: 0px;
+        }
+        p {
+            color: $primaryColor;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+
+
+.cs-logo {
+    img {
+        max-height: 85px;
+    }
+}
+
+.cs-newsletter-form {
+    position: relative;
+}
+
+.nl-content {
+    position: relative;
+    max-width: 540px;
+    margin: 25px auto;
+    form.nl-form {
+        position: relative;
+        margin: 40px auto;
+        .input-group {
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        input {
+            font-size: 16px;
+            letter-spacing: 0px;
+            height: 60px;
+            padding: 0px 25px;
+            border-radius: 5px;
+        }
+        button.btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 60px;
+            min-width: 130px;
+            font-size: 16px;
+            letter-spacing: 0px;
+            background-color: $elementsColor;
+            color: $primaryColor;
+            font-weight: 400;
+        }
+        span.input-group-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+/*------------- Coming Soon Section END -------------*/

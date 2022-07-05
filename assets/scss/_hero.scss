@@ -1,0 +1,2060 @@
+/*----------------------------------------*/
+/*  Hero Style 1
+/*----------------------------------------*/
+
+.hero-area {
+    position: relative;
+    padding: 160px 0px 80px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.hero_V1 {
+    background-image: url(../img/bg/hero-1.jpg);
+    padding-bottom: 60px;
+    background-attachment: fixed;
+    &:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(16, 16, 21, .80);
+    }
+    .hero-content {
+        position: relative;
+        padding: 15px;
+    }
+    
+    .hero-content .hero-text {
+        position: relative;
+        text-align: center;
+        margin: 50px auto;
+    }
+    
+    .hero-content .hero-text h2 {
+        color: $primaryColor;
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 500;
+        letter-spacing: 0px;
+        text-transform: capitalize;
+    }
+    
+    .hero-content .hero-text h2 span {
+    }
+    
+    .hero-content .hero-text p {
+        font-size: 18px;
+        line-height: 28px;
+        color: $primaryColor;
+        padding: 5px;
+        max-width: 900px;
+        margin: 15px auto;
+    }
+    
+    .hero-content .hero-text .hero-btn a {
+        margin: 10px;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px solid $primaryColor;
+    }
+    
+    
+    .hero-content .hero-text .hero-btn a:hover {
+        border-color: $elementsColor;
+        background-color: $elementsColor;
+    }
+    .hb-scroll-btn {
+        position: relative;
+        text-align: center;
+    }
+    
+    .hb-scroll-btn a {
+        color: $primaryColor;
+        font-size: 30px;
+    }
+}
+
+
+
+/*------------- Hero Style 1 END -------------*/
+
+/*----------------------------------------*/
+/*  Revolution Hero Style 1
+/*----------------------------------------*/
+
+.revSlideHero {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    .erinyen .tp-tab-title {
+        color: #fff;
+        letter-spacing: 0px;
+        font-weight: 400;
+    }
+    
+    .tp-tabs {
+        margin-top: 40px;
+    }
+    
+    
+    
+    
+    .Newspaper-Button {}
+    
+    .Newspaper-Subtitle {
+        color: #fff !important;
+        margin-bottom: 5px !important;
+        padding-bottom: 10px !important;
+        top: 0px !important;
+        font-size: 18px !important;
+    }
+    
+    .Newspaper-Title {
+        top: 15px !important;
+    }
+
+    .Newspaper-Button {
+        letter-spacing: 0px !important;
+        font-weight: 400 !important;
+        background-color: #eb9d37 !important;
+    }
+}
+
+.revSlideHero .tp-bgimg {
+    position: relative;
+    transition: .5s ease;
+}
+
+// .revSlideHero .tp-bgimg:before {
+//     position: absolute;
+//     content: '';
+//     height: 100%;
+//     width: 100%;
+//     background-color: rgba(0, 0, 0, 0.35);
+//     top: 0;
+//     left: 0;
+//     z-index: 9;
+//     transition: .5s ease;
+// }
+
+.revSlideHero .tp-loop-wrap {
+    padding-top: 100px;
+}
+/*------------- Revolution Hero Style 1 END -------------*/
+
+/*----------------------------------------*/
+/*  Hero Style 2
+/*----------------------------------------*/
+
+.hero_V2 {
+    padding: 0px;
+    background-image: url(../img/bg/hero-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    .hero19-carousel,
+    .hero2-carousel {
+        position: relative;
+        .item {
+            position: relative;
+            .single-hero-carousel {
+                position: relative;
+                padding: 160px 0px 140px;
+                img.hero-slider-bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -2;
+                    object-fit: cover;
+                }
+            }
+        }
+        .owl-nav {
+            display: none;
+        }
+        .owl-dots {
+            position: absolute;
+            right: 25px;
+            top: 45%;
+            .owl-dot {
+                display: block;
+                span {
+                    position: relative;
+                    height: 16px;
+                    width: 16px;
+                    background-color: transparent !important;
+                    border: 1px solid $primaryColor;
+                    &:hover {
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            height: 10px;
+                            width: 10px;
+                            background-color: $primaryColor;
+                            right: 2px;
+                            top: 2px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            .owl-dot.active {
+                span {
+                    background-color: rgba(0, 0, 0, 0);
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        height: 10px;
+                        width: 10px;
+                        background-color: $primaryColor;
+                        right: 2px;
+                        top: 2px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .hero-content {
+        position: relative;
+        margin: 25px auto;
+        .hero-text {
+            position: relative;
+            text-align: center;
+            max-width: 992px;
+            margin: 25px auto;
+            h2 {
+                font-size: 60px;
+                line-height: 72px;
+                color: $primaryColor;
+                font-weight: 500;
+                letter-spacing: 0px;
+                text-transform: capitalize;
+            }
+            .hero-btn {
+                margin: 60px auto 50px;
+                a.btn-style-1 {
+                    position: relative;
+                    background-color: rgba(16, 16, 21, .5);
+                    border: 1px solid $primaryColor;
+                    border-radius: 0px;
+                    &:before,
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        height: 100%;
+                        width: 50%;
+                        background-color: rgba(0, 0, 0, 0.15);
+                        top: 0;
+                        opacity: 0;
+                        transition: .5s ease;
+                    }
+
+                    &:before {
+                        left: 0;
+                    }
+                    &:after {
+                        right: 0;
+                    }
+
+                    
+                    &:hover {
+                        
+                        &:before {
+                            opacity: 1;
+                            width: 0px;
+                        }
+                        &:after {
+                            opacity: 1;
+                            width: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hero-social {
+        position: absolute;
+        top: 35%;
+        left: 25px;
+        z-index: 1;
+        ul {
+            position: relative;
+            padding: 0;
+            list-style-type: none;
+            li {
+                position: relative;
+                margin: 15px auto;
+                a {
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: $primaryColor;
+                    letter-spacing: 0px;
+                    font-weight: 200;
+                    i {
+                        width: 20px;
+                    }
+                    span {
+                        opacity: 0;
+                        @include transition(all,.8s,ease); overflow: hidden;
+                        margin-left: -60px;
+                    }
+                    &:hover {
+                        span {
+                            opacity: 1;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+/*------------- Hero Style 2 END -------------*/
+
+
+
+/*----------------------------------------*/
+/*  Hero Style 3
+/*----------------------------------------*/
+
+.hero_V3 {
+    padding: 0px;
+    background-image: url(../img/bg/hero-3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    .hero2-carousel {
+        position: relative;
+        .item {
+            position: relative;
+            .single-hero-carousel {
+                position: relative;
+                padding: 160px 0px 100px;
+                img.hero-slider-bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -2;
+                }
+            }
+        }
+        .owl-nav {
+            display: none;
+        }
+        .owl-dots {
+            // position: absolute;
+            // right: 25px;
+            // top: 45%;
+            margin: 0px auto;
+            padding-bottom: 25px;
+            .owl-dot {
+                // display: block;
+                span {
+                    position: relative;
+                    height: 16px;
+                    width: 16px;
+                    background-color: transparent !important;
+                    border: 1px solid $primaryColor;
+                    &:hover {
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            height: 10px;
+                            width: 10px;
+                            background-color: $primaryColor;
+                            right: 2px;
+                            top: 2px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            .owl-dot.active {
+                span {
+                    background-color: rgba(0, 0, 0, 0);
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        height: 10px;
+                        width: 10px;
+                        background-color: $primaryColor;
+                        right: 2px;
+                        top: 2px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .hero-content {
+        position: relative;
+        margin: 25px auto;
+        .hero-text {
+            position: relative;
+            text-align: left;
+            max-width: 992px;
+            margin: 25px auto;
+            h2 {
+                position: relative;
+                font-size: 46px;
+                line-height: 54px;
+                color: $primaryColor;
+                font-weight: 500;
+                letter-spacing: 0px;
+                text-transform: uppercase;
+                margin: 40px auto;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    height: 2px;
+                    width: 300px;
+                    background-color: $primaryColor;
+                    bottom: -20px;
+                    left: 0;
+                }
+            }
+            p {
+                font-size: 22px;
+                line-height: 28px;
+                letter-spacing: 0px;
+                color: $primaryColor;
+                font-weight: 300;
+                margin: 25px auto;
+            }
+            .hero-btn {
+                margin: 100px auto 50px;
+                a.btn-style-1 {
+                    background-color: rgba(16, 16, 21, .5);
+                    border: 1px solid $primaryColor;
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+    .hero-social {
+        position: absolute;
+        top: 35%;
+        left: 25px;
+        z-index: 1;
+        ul {
+            position: relative;
+            padding: 0;
+            list-style-type: none;
+            li {
+                position: relative;
+                margin: 15px auto;
+                a {
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: $primaryColor;
+                    letter-spacing: 0px;
+                    font-weight: 200;
+                    i {
+                        width: 20px;
+                    }
+                    span {
+                        opacity: 0;
+                        @include transition(all,.8s,ease); overflow: hidden;
+                        margin-left: -60px;
+                    }
+                    &:hover {
+                        span {
+                            opacity: 1;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+/*------------- Hero Style 3 END -------------*/
+
+
+/*----------------------------------------*/
+/*  Hero Style 4
+/*----------------------------------------*/
+
+
+.hero_V4 {
+    background-image: url(../img/bg/hero-4.jpg);
+    border-bottom: 5px solid $elementsColor;
+    padding-bottom: 60px;
+    background-size: cover;
+    background-attachment: fixed;
+    &:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(16, 16, 21, .80);
+    }
+    .hero-content {
+        position: relative;
+        padding: 15px;
+        .hero-text {
+            position: relative;
+            text-align: left;
+            margin: 80px auto;
+            h2 {
+                color: $primaryColor;
+                font-size: 48px;
+                line-height: 60px;
+                font-weight: 400;
+                letter-spacing: 0px;
+                span {
+                    text-decoration: underline;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 28px;
+                color: $primaryColor;
+                padding: 15px 0px;
+                max-width: 900px;
+            }
+            .hero-btn {
+                a {
+                    color: $elementsColor;
+                    letter-spacing: 0px;
+                    margin: 10px;
+                    font-size: 18px;
+                    background-color: transparent;
+                    position: relative;
+                    padding: 5px 0px 5px 75px;
+                    &:hover {
+                        background-color: transparent !important;
+                        border-color: $elementsColor;
+                        background-color: $elementsColor;
+                    }
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 65px;
+                        height: 1px;
+                        background-color: $elementsColor;
+                        left: -5px;
+                        top: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .hb-scroll-btn {
+        position: relative;
+        text-align: right;
+        a {
+            color: $primaryColor;
+            font-size: 30px;
+        }
+    }
+    
+    .hero-content .hero-social {
+        position: relative;
+        ul {
+            position: relative;
+            padding: 0px;
+            list-style-type: none;
+            li {
+                position: relative;
+                display: inline-block;
+                margin: 8px;
+                a {
+                    position: relative;
+                    color: $primaryColor;
+                    font-size: 18px;
+                    letter-spacing: 0px;
+                    &:hover {
+                        color: #eb9d29;
+                    }
+                }
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                width: 85%;
+                height: 2px;
+                background-color: #8c8c93;
+                right: -80px;
+                top: 18px;
+            }
+        }
+    }
+
+ 
+}
+
+
+
+/*------------- Hero Style 4 END -------------*/
+
+
+/*----------------------------------------*/
+/*  Hero Style 5
+/*----------------------------------------*/
+
+
+.hero_V5 {
+	padding: 0px;
+}
+.heroV5-carousel {
+	position: relative;
+	.item {
+		.single-hero5 {
+			&:before {
+				position: absolute;
+				content: '';
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				background-color: #202020;
+				opacity: .75;
+				z-index: 1;
+			}
+			
+            position: relative;
+            padding: 120px 0px 15px;
+            min-height: 665px;
+            overflow: hidden;
+           
+			img.sh5bg {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+                left: 0;
+                object-fit: cover;
+			}
+			.hero-text {
+				position: relative;
+				z-index: 1;
+				max-width: 767px;
+				margin: 80px auto;
+                text-align: center;
+                padding-bottom: 60px;
+				h2 {
+					font-size: 80px;
+					line-height: 100px;
+					letter-spacing: 0px;
+					color: $primaryColor;
+					text-transform: uppercase;
+					margin: 40px auto 25px;
+					padding: 60px 0px 40px;
+					font-weight: 600;
+				}
+			}
+			.hb-bottom {
+				position: relative;
+				width: 100%;
+				max-width: 1024px;
+				z-index: 1;
+				margin: 0 auto;
+				min-height: 50px;
+				padding: 12px 0px;
+				&:before {
+					position: absolute;
+					content: '';
+					width: 200%;
+					height: 1px;
+					background-color: #666666;
+					top: -15px;
+					left: -50%;
+				}
+			}
+			.hb-social {
+				position: relative;
+				width: 50%;
+				float: left;
+				ul {
+					position: relative;
+					padding: 0;
+					list-style-type: none;
+					li {
+						position: relative;
+						display: inline-block;
+						margin: 5px;
+						a {
+							color: $primaryColor;
+							font-size: 14px;
+                            letter-spacing: 0px;
+                            &:hover {
+                                color: $elementsColor;
+                            }
+						}
+					}
+				}
+			}
+			.hb-phone {
+				position: relative;
+				width: 50%;
+				float: right;
+				text-align: right;
+				p {
+					color: $primaryColor;
+					font-size: 12px;
+					i {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		width: 80%;
+		.owl-prev {
+			float: left;
+		}
+		.owl-next {
+			float: right;
+		}
+		[class*=owl-] {
+			height: 44px;
+			width: 44px;
+			background-color: rgba(0, 0, 0, 0.40);
+			font-size: 28px;
+			border: 1px solid $primaryColor;
+			border-radius: 50%;
+			text-align: center;
+			padding-top: 6px;
+		}
+	}
+	.owl-dots {
+		position: absolute;
+		bottom: 15px;
+		left: 0;
+        width: 100%;
+        display: none;
+		.owl-dot {
+			span {
+				background-color: rgba(255, 255, 255, 0) !important;
+				border: 1px solid $primaryColor;
+			}
+		}
+		.owl-dot.active {
+			span {
+				background-color: $primaryColor !important;
+			}
+		}
+	}
+}
+
+
+.hero6-carousel {
+    .owl-nav {
+        display: none;
+    }
+}
+/*------------- Hero Style 5 END -------------*/
+
+
+
+/*----------------------------------------*/
+/*  Hero Style 6
+/*----------------------------------------*/
+
+.hero_V10 {
+	padding: 160px 0px 100px;
+	.hero-text {
+		position: relative;
+		text-align: center;
+		max-width: 767px;
+		margin: 0 auto;
+		h2 {
+			font-size: 60px;
+			letter-spacing: 0px;
+			color: $secondaryColor;
+			font-weight: 600;
+			line-height: 75px;
+		}
+		p {
+			font-size: 16px;
+			letter-spacing: 0px;
+			color: $secondaryColor;
+			line-height: 24px;
+			margin: 25px auto;
+		}
+		a {
+			position: relative;
+			font-size: 24px;
+			letter-spacing: 0px;
+			color: $secondaryColor;
+			font-weight: 500;
+			&:after {
+				position: absolute;
+				content: '';
+				height: 80px;
+				width: 2px;
+				background-color: $secondaryColor;
+				left: 50%;
+				bottom: -120px;
+			}
+		}
+	}
+}
+
+/*------------- Hero Style 6 END -------------*/
+
+
+/*----------------------------------------*/
+/*  Hero Style 7
+/*----------------------------------------*/
+.hero_V11 {
+    background-image: url(../img/section-img/hero11.jpg);
+    padding: 160px 0px 25px;
+    background-size: cover;
+    background-attachment: fixed;
+    .hero-text {
+        position: relative;
+        margin: 50px auto;
+        padding: 40px 0px 80px;
+    }
+    .hero-content {
+        position: relative;
+        margin: 25px auto;
+        padding: 40px 0px 60px;
+    }
+    .hb-scroll-btn {
+        position: relative;
+        text-align: center;
+        padding-top: 40px;
+        a {
+            font-size: 36px;
+            line-height: 40px;
+            color: $primaryColor;
+        }
+    }
+    
+    .ht-content {
+        position: relative;
+        width: 100%;
+        font-size: 33px;
+        line-height: 40px;
+        color: $primaryColor;
+        height: 40px;
+        text-align: center;
+        letter-spacing: 0px;
+    }
+      
+    .visible {
+        font-weight: 600;
+        overflow: hidden;
+        height: 40px;
+    }
+    ul.ht {
+        margin-top: 0;
+        padding-left: 0;
+        text-align: center;
+        list-style: none;
+        display: inline-block;
+        animation: 6s linear 0s normal none infinite change;
+        -webkit-animation: 6s linear 0s normal none infinite change;
+        -moz-animation: 6s linear 0s normal none infinite change;
+        -o-animation: 6s linear 0s normal none infinite change;
+        li {
+            line-height: 40px;
+            margin: 0;
+        }
+    }
+      @-webkit-keyframes opacity {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes opacity {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes change {
+        0% {
+          margin-top: 0;
+        }
+        15% {
+          margin-top: 0;
+        }
+        25% {
+          margin-top: -40px;
+        }
+        40% {
+          margin-top: -40px;
+        }
+        50% {
+          margin-top: -80px;
+        }
+        65% {
+          margin-top: -80px;
+        }
+        75% {
+          margin-top: -40px;
+        }
+        85% {
+          margin-top: -40px;
+        }
+        100% {
+          margin-top: 0;
+        }
+      }
+      @keyframes change {
+        0% {
+          margin-top: 0;
+        }
+        15% {
+          margin-top: 0;
+        }
+        25% {
+          margin-top: -40px;
+        }
+        40% {
+          margin-top: -40px;
+        }
+        50% {
+          margin-top: -80px;
+        }
+        65% {
+          margin-top: -80px;
+        }
+        75% {
+          margin-top: -40px;
+        }
+        85% {
+          margin-top: -40px;
+        }
+        100% {
+          margin-top: 0;
+        }
+      }
+}
+
+
+/*------------- Hero Style 7 END -------------*/
+
+
+/*----------------------------------------*/
+/*  Hero Style 8
+/*----------------------------------------*/
+.hero_V13 {
+    background-image: url(../img/bg/hero-13.jpg);
+    padding: 120px 0px 0px;
+    &:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(16, 16, 21, .60);
+        z-index: 1;
+    }
+    .hero-sliderWith-thumbnail{
+        margin: 0 auto;
+        max-width: 1024px;
+   }
+   .hss-V13 {
+    position: relative;
+    }
+
+    .hss-V13 {
+        .item {
+            position: relative;
+            .hssV13-single {
+                position: relative;
+                text-align: center;
+                margin: 50px auto;
+                padding: 55px 0px;
+                max-width: 800px;
+                h2 {
+                    font-family: $quaternaryFont;
+                    font-size: 48px;
+                    color: $primaryColor;
+                    line-height: 68px;
+                    font-weight: 500;
+                    letter-spacing: 0px;
+                    margin-bottom: 25px;
+                }
+                p {
+                    font-size: 18px;
+                    letter-spacing: 0px;
+                    color: $primaryColor;
+                    line-height: 26px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .hss-V13thumbs {
+        position: relative;
+        .item {
+            position: relative;
+            .hss-thumbs {
+                position: relative;
+                cursor: pointer;
+                text-align: center;
+                border: 1px solid #8d8da0;
+                padding: 25px 15px;
+                background-color:  rgba(16, 16, 21, .20);
+                span {
+                    position: relative;
+                    display: block;
+                    font-family: $quaternaryFont;
+                    color: $primaryColor;
+                    font-size: 24px;
+                    line-height: 36px;
+                    letter-spacing: 0px;
+                }
+                p {
+                    font-family: $quaternaryFont;
+                    color: $primaryColor;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    line-height: 26px;
+                }
+            }
+        }
+        .current {
+            .item {
+                .hss-thumbs {
+                    background-color: $elementsColor;
+                    border-color: $elementsColor;
+                }
+            }
+        }
+    }
+    .hero-sliderWith-thumbnail {
+        .owl-nav {
+            display: none;
+        }
+        .owl-dots {
+            display: none;
+        }
+    }
+
+}
+/*------------- Hero Style 8 END -------------*/
+
+
+/*----------------------------------------*/
+/*  Hero Style 9
+/*----------------------------------------*/
+.hero_V14 {
+    padding: 0;
+    z-index: 1;
+    min-height: 660px;
+    overflow: hidden;
+
+    .heroP-grid {
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(16, 16, 21, .90);
+        }
+    }
+    .hero-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        z-index: 9999;
+    }
+    .hero-m-list {
+        position: relative;
+        margin: 25px auto;
+        display: block;
+        padding: 100px 0px;
+        ul {
+            position: relative;
+            padding: 0;
+            list-style-type: none;
+            max-width: 500px;
+            margin: 0 auto;
+            height: 500px;
+            li {
+                display: block;
+                position: absolute;
+                height: 120px;
+                width: 120px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 2px solid $elementsColor;
+                @include transition(all,.5s,ease); 
+                &:hover {
+                    transform: scale(1.1);
+                }
+                a {
+                    position: relative;
+                    color: $primaryColor;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    padding: 15px 0px;
+                    z-index: 1;
+                    text-align: center;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                    img.hml-bg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        z-index: -1;
+                    }
+                    img.hero-logo {
+                        position: relative;
+                        z-index: 3;
+                        height: 50px;
+                        width: 75px;
+                        margin-left: -15px;
+                        margin-top: 20px;
+                    }
+                    i {
+                        position: relative;
+                        font-size: 25px;
+                        line-height: 30px;
+                        display: block;
+                        z-index: 3;
+                    }
+                    span {
+                        position: relative;
+                        display: block;
+                        font-family: $quaternaryFont;
+                        letter-spacing: 0px;
+                        line-height: 18px;
+                        font-size: 14px;
+                        margin-top: 5px;
+                        z-index: 3;
+                    }
+                    &:before {
+                        position: absolute;
+                        background-color: rgba(16, 16, 21, .80);
+                        content: "";
+                        height: 100%;
+                        width: 100%;
+                        z-index: 2;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+                &:first-child {
+                    left: calc(50% - 60px);
+                    top: calc(50% - 60px);
+                    border: none;
+                }
+                &:nth-child(2) {
+                    top: 0;
+                    left: calc(50% - 60px);
+                }
+                &:nth-child(3) {
+                    right: 0;
+                    top: calc(50% - 60px);
+                }
+                &:nth-child(4) {
+                    left: calc(50% - 60px);
+                    bottom: 0;
+                }
+                &:nth-child(5) {
+                    left: 0;
+                    top: calc(50% - 60px);
+                }
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                height: calc(100% - 120px);
+                width: calc(100% - 102px);
+                border: 2px solid $elementsColor;
+                border-radius: 50%;
+                left: 60px;
+                top: 60px;
+            }
+        }
+    }
+    .ri-grid {
+        margin: 0px auto 30px;
+        position: relative;
+        height: auto;
+        ul {
+            list-style: none;
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            zoom: 1;
+            &:before {
+                content: '';
+                display: table;
+            }
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            li {
+                margin: 0;
+                padding: 0;
+                float: left;
+                position: relative;
+                display: block;
+                overflow: hidden;
+                background: #000;
+                max-height: 132px !important;
+                a {
+                    display: block;
+                    outline: none;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-backface-visibility: hidden;
+                    -moz-backface-visibility: hidden;
+                    -o-backface-visibility: hidden;
+                    -ms-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    -webkit-transform-style: preserve-3d;
+                    -moz-transform-style: preserve-3d;
+                    -o-transform-style: preserve-3d;
+                    -ms-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+                    -webkit-background-size: 100% 100%;
+                    -moz-background-size: 100% 100%;
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #333;
+                    -webkit-box-sizing: content-box;
+                    -moz-box-sizing: content-box;
+                    box-sizing: content-box;
+                }
+            }
+        }
+    }
+
+    
+    /* Grid wrapper sizes */
+    .ri-grid-size-1{
+        width: 55%;
+    }
+    .ri-grid-size-2{
+        width: 100%;
+    }
+    .ri-grid-size-3{
+        width: 100%;
+        margin-top: 0px;
+    }
+    
+    /* Shadow style */
+    
+    .ri-shadow {
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            bottom: 15px;
+            left: 10px;
+            width: 50%;
+            height: 20%;
+            max-width: 300px;
+            max-height: 100px;
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            right: 10px;
+            left: auto;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            bottom: 15px;
+            left: 10px;
+            width: 50%;
+            height: 20%;
+            max-width: 300px;
+            max-height: 100px;
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+        }
+    }
+    .ri-grid-loading {
+        &:after {
+            display: none;
+        }
+        &:before {
+            display: none;
+        }
+        .ri-loading-image {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            left: 50%;
+            margin: 100px 0 0 -15px;
+            display: block;
+        }
+    }
+    .ri-loading-image {
+        display: none;
+    }
+
+
+}
+
+
+/*------------- Hero Style 9 END -------------*/
+
+
+
+
+/*----------------------------------------*/
+/*  Full Page Hero Style 1
+/*----------------------------------------*/
+
+.full-page-hero {
+	position: relative;
+	overflow: hidden;
+}
+.fph-V1 {
+	min-height: 620px;
+	height: 100vh;
+	.gallerySliderV1_nav {
+		position: absolute;
+		width: 90%;
+		bottom: 25px;
+		left: 5%;
+		z-index: 1;
+		.slick-prev {
+			left: -40px;
+			z-index: 1;
+		}
+		.slick-next {
+			right: -30px;
+			z-index: 1;
+		}
+		.slick-arrow {
+			&:before {
+				font-size: 30px;
+				color: $primaryColor;
+			}
+		}
+		.item {
+			position: relative;
+			padding: 10px;
+			.gp-thumb {
+				position: relative;
+				cursor: pointer;
+				&:before {
+					position: absolute;
+					content: '';
+					background-color: rgba(32, 32, 32, .5);
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					opacity: 0;
+				}
+				&:after {
+					position: absolute;
+					content: '\f067';
+					font-family: fontAwesome;
+					top: calc(50% - 18px);
+					left: calc(50% - 18px);
+					color: $primaryColor;
+					font-size: 20px;
+					border: 3px solid $primaryColor;
+					width: 36px;
+					height: 36px;
+					text-align: center;
+					border-radius: 50%;
+					padding-top: 1px;
+					opacity: 0;
+				}
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+    }
+    .gallerySliderV1 {
+        height: 100%;
+        .slick-list {
+            height: 100%;
+            .slick-track {
+                height: 100%;
+                .item {
+                    height: 100%;
+                    .gp-slider-img {
+                        position: relative;
+                        height: 100%;
+                        img {
+                            object-fit: cover;
+                            height: 100%;
+                            width: 100%;
+                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+/*------------- Full Page Hero Style 1 END -------------*/
+
+
+/*----------------------------------------*/
+/*  Full Page Hero Style 2
+/*----------------------------------------*/
+
+
+.fph-V2 {
+	height: 100vh;
+	.hero-img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+		.h-img-box {
+			position: relative;
+            max-width: 350px;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 100vh;
+			img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+			}
+			.himg-hover {
+				position: absolute;
+				left: -100%;
+				top: 0;
+				background-color: rgba(41, 43, 45, .80);
+				text-align: center;
+				height: 100%;
+				width: 100%;
+                overflow: hidden;
+                @include transition(all,.5s,ease); 
+				a {
+					position: absolute;
+					font-size: 18px;
+					letter-spacing: 0px;
+					color: $primaryColor;
+					font-weight: 400;
+                    display: inline-block;
+                    bottom: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    &:hover {
+                        color: $elementsColor;
+                    }
+                    span.pnow {
+                        position: absolute;
+                        bottom: 25px;
+                        right: 40px;
+                        
+                    }
+					i {
+						margin-left: 10px;
+					}
+				}
+			}
+			.himgh2 {
+				background-color: rgba(0, 0, 0, .60);
+				a {
+					font-size: 30px;
+					font-weight: 500;
+					bottom: 0%;
+					width: 100%;
+					left: 0;
+                    text-align: center;
+                    span {
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        width: 100%;
+                        text-align: center;
+                    }
+				}
+			}
+			&:hover {
+				.himg-hover {
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+
+/*------------- Full Page Hero Style 2 END -------------*/
+
+
+
+
+
+/*----------------------------------------*/
+/*  Full Page Hero Style 3
+/*----------------------------------------*/
+
+
+.fph-V3 {
+	position: relative;
+	height: 100vh;
+}
+.hero-fph3-carousel {
+	position: relative;
+	.owl-nav {
+		display: none;
+	}
+	.owl-dots {
+		display: none;
+	}
+	.item {
+		position: relative;
+		.single-fph {
+			position: relative;
+			background-color: $primaryColor;
+			.sfph-text {
+				position: relative;
+				margin: 60px auto;
+				padding: 125px 0px 0px;
+				max-width: 540px;
+				margin-right: 0;
+				h2 {
+					font-size: 48px;
+					line-height: 64px;
+					letter-spacing: 0px;
+					font-weight: 700;
+					color: $secondaryColor;
+				}
+				p {
+					font-size: 16px;
+					color: $secondaryColor;
+					line-height: 24px;
+					margin: 15px auto;
+				}
+				a.sfph-btn {
+					font-size: 16px;
+					display: inline-block;
+					color: $secondaryColor;
+					letter-spacing: 0px;
+					font-weight: 600;
+					border: 1px solid $secondaryColor;
+					padding: 10px 20px;
+                    margin: 15px auto;
+                    position: relative;
+                    z-index: 1;
+                    &:hover {
+                        color: $primaryColor;
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 0%;
+                        height: 100%;
+                        background-color: #43435b;
+                        left: 0;
+                        top: 0;
+                        z-index: -1;
+                        transition: .5s ease;
+                    }
+				}
+			}
+		}
+		.single-fph.altbg {
+			position: relative;
+			background-color: #f7f7f7;
+		}
+    }
+    
+
+
+    
+
+    .item .single-fph .sfph-text {
+        margin-right: -100%;
+        transition: 2.5s ease;
+    }
+
+    .owl-item.active.center .sfph-text {
+        margin-right: 0px;
+    }
+}
+
+
+/*------------- Full Page Hero Style 3 END -------------*/
+
+
+/*----------------------------------------*/
+/*  Full Page Hero Style 4
+/*----------------------------------------*/
+.fph14 {
+    height: 100vh;
+    overflow: hidden;
+    min-height: 656px;
+    .hero-m-list {
+        padding: 60px 0px;
+        margin-bottom: 0px;
+    }
+    .ri-grid-size-2 {
+        margin-bottom: 0px;
+    }
+}
+
+.hv14 {
+    .hero-m-list {
+        margin-top: 50px;
+    }
+}
+/*------------- Full Page Hero Style 4 END -------------*/
+
+
+/*----------------------------------------*/
+/*  Full Page Hero Style 5
+/*----------------------------------------*/
+
+.full-page-hero {
+	position: relative;
+	overflow: hidden;
+}
+.fph-V2 {
+	height: 100vh;
+	.gallerySliderV2_nav {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: 25px;
+		left: 0;
+		top: 0;
+		padding: 115px 50px;
+		padding-left: 50px;
+		.slick-prev {
+			left: -40px;
+			z-index: 1;
+		}
+		.slick-next {
+			right: -30px;
+			z-index: 1;
+		}
+		.slick-arrow {
+			&:before {
+				font-size: 30px;
+				color: $primaryColor;
+			}
+		}
+		.item {
+			position: relative;
+			padding: 10px;
+			.gp-thumb {
+				position: relative;
+				cursor: pointer;
+				&:before {
+					position: absolute;
+					content: '';
+					background-color: rgba(32, 32, 32, .5);
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					opacity: 0;
+				}
+				&:after {
+					position: absolute;
+					content: '\f067';
+					font-family: fontAwesome;
+					top: calc(50% - 18px);
+					left: calc(50% - 18px);
+					color: $primaryColor;
+					font-size: 20px;
+					border: 3px solid $primaryColor;
+					width: 36px;
+					height: 36px;
+					text-align: center;
+					border-radius: 50%;
+					padding-top: 1px;
+					opacity: 0;
+				}
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+.gslider-v2-vertical-nav {
+	position: relative;
+}
+.gallerySliderV2_nav {
+	.item {
+		.sliderNav-text {
+			position: relative;
+			max-width: 767px;
+			margin-left: 0;
+			h3 {
+				font-size: 36px;
+				line-height: 44px;
+				letter-spacing: 0px;
+				color: #2b2b2b;
+				display: inline-block;
+				position: relative;
+				span {
+					display: block;
+					font-size: 44px;
+					line-height: 50px;
+				}
+			}
+			&:hover {
+				h3 {
+					color: $primaryColor;
+				}
+				a {
+					opacity: 1;
+				}
+			}
+			a {
+				position: relative;
+				font-size: 16px;
+				font-weight: 300;
+				letter-spacing: 0px;
+				color: $primaryColor;
+				right: 0;
+				display: inline-block;
+				padding-left: 100px;
+				opacity: 0;
+				&:before {
+					position: absolute;
+					content: '';
+					left: 7px;
+					top: 14px;
+					width: 80px;
+					height: 1px;
+					background-color: $primaryColor;
+				}
+			}
+		}
+	}
+	.slick-current {
+		.sliderNav-text {
+			h3 {
+				color: $primaryColor;
+			}
+		}
+	}
+}
+
+
+
+/*------------- Full Page Hero Style 5 END -------------*/
+.hero-16 {
+    .scroll-down {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        animation: scrollBounce 2s infinite;
+        -webkit-animation: scrollBounce 2s infinite;
+        -moz-animation: scrollBounce 2s infinite;
+        -o-animation: scrollBounce 2s infinite;
+    }
+    
+    .scroll-down a {
+        color: #fff;
+        font-size: 48px;
+        
+    }
+}
+
+
+.hero_V18 .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.hero_V18 .hero-content .hero-text {
+    position: relative;
+    padding: 120px 0px 40px;
+    max-width: 820px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+.hero_V18 .hero-content .hero-text h3 {
+    position: absolute;
+    color: #fff;
+    font-size: 48px;
+    letter-spacing: 0px;
+    font-weight: 500;
+    line-height: 75px;
+    bottom: 50px;
+    font-family: 'Adamina', serif;
+}
+/*----------------------------------------*/
+/*  Full Page Hero Style 6
+/*----------------------------------------*/
+
+.hero_V19 {
+	height: 100vh;
+	overflow: hidden;
+	.single-hero-carousel {
+		background-color: rgba(23, 22, 40, .60);
+	}
+	.hero-content {
+		.hero-text {
+			h2 {
+				font-size: 44px;
+				line-height: 52px;
+				margin-bottom: 20px;
+			}
+			p {
+				font-size: 20px;
+				color: $primaryColor;
+				font-weight: 300;
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.hero-btn {
+				margin: 30px 0px 0px;
+			}
+		}
+	}
+}
+
+/*------------- Full Page Hero Style 6 END -------------*/
+
+/*----------------------------------------*/
+/*  Full Page Hero Style 7
+/*----------------------------------------*/
+
+
+.hero_V20 {
+	height: 100vh;
+	overflow: hidden;
+	padding: 0;
+    width: 100%;
+    
+    .hero20-carousel,
+	.hero2-carousel {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		.item {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			.single-hero-carousel {
+				position: relative;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				min-height: 660px;
+				&:before {
+					position: absolute;
+					content: '';
+					height: 100%;
+					width: 100%;
+					background-color: rgba(23, 22, 40, .60);
+					z-index: 0;
+				}
+				img.hero-slider-bg {
+					position: absolute;
+					width: 100%;
+					filter: blur(1px);
+					-webkit-filter: blur(1px);
+					top: 0;
+                    left: 0;
+                    height: 100%;
+                    z-index: -1;
+                    object-fit: cover;
+				}
+			}
+		}
+		.owl-nav {
+			display: none;
+		}
+		.owl-dots {
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			width: 100%;
+		}
+    }
+    .owl-stage-outer {
+        height: 100%;
+        .owl-stage {
+            height: 100%;
+            .owl-item {
+                height: 100%;
+            }
+        }
+    }
+    
+	.hero-content {
+		position: relative;
+		margin: 25px auto;
+		padding-top: 100px;
+		.hero-img {
+			max-width: 800px;
+			margin: 0px auto;
+			position: relative;
+		}
+    }
+    
+
+    .hero-content {
+        .hero-img {
+            img {
+                transition: 2s ease;
+                width: 0px;
+            }
+        }
+    }
+    
+    .active {
+        .hero-content {
+            .hero-img {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+/*------------- Full Page Hero Style 7 END -------------*/
+
+/*----------------------------------------*/
+/*  Hero Style 10
+/*----------------------------------------*/
+.hero_V18 {
+    min-height: 660px;
+    overflow: hidden;
+    cursor: none;
+    .full-size { 
+        height : 100%; 
+        width : 100%; 
+        position: absolute; 
+        top : 0; 
+        left : 0;
+    }
+    .blend-multiply {
+        mix-blend-mode : multiply;
+    }
+    .blend-screen {
+        mix-blend-mode: multiply;
+    }
+    
+    .mask-bg-color {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .animated-bg {
+        background-image: url('../img/bg/hero-18.jpg'); 
+        background-position:center;  
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        -webkit-background-size:cover;
+        background-size:cover;
+    }
+    .element-mask {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+    .circle-follow {
+        position: absolute;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0);
+        color: $primaryColor;
+        width: 100px;
+        height: 100px;
+        top: calc( 50% - 50px);
+        left: calc( 50% - 50px);
+        /* -webkit-border-radius: 50px; */
+        /* border-radius: 50px; */
+        -webkit-transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
+        transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
+        opacity: 1;
+        font-size: 70px;
+    }
+    .circle-follow.moving {
+        opacity : 1;
+    }
+    
+    
+    /* hack to detect ie11 and above - blend mode not supported */
+    _:-ms-fullscreen, 
+    :root .letter-mask {
+        background-color: transparent; 
+    }
+    _:-ms-fullscreen, 
+    :root .animated-bg {
+        opacity: 0.2;
+    }
+    _:-ms-fullscreen, 
+    :root .circle-follow {
+        background-color:$primaryColor; 
+        opacity: 0.2; 
+    }
+    
+}
+
+
+/*------------- Hero Style 10 END -------------*/

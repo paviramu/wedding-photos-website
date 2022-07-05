@@ -1,0 +1,139 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 08/01/2019 09:00
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-001-camera:before { content: "\f100"; }
+.flaticon-002-camera-1:before { content: "\f101"; }
+.flaticon-003-tripod:before { content: "\f102"; }
+.flaticon-004-spotlight:before { content: "\f103"; }
+.flaticon-005-spotlight-1:before { content: "\f104"; }
+.flaticon-006-soft-box:before { content: "\f105"; }
+.flaticon-007-umbrella:before { content: "\f106"; }
+.flaticon-008-flash:before { content: "\f107"; }
+.flaticon-009-len:before { content: "\f108"; }
+.flaticon-010-telephoto:before { content: "\f109"; }
+.flaticon-011-fisheye:before { content: "\f10a"; }
+.flaticon-012-camera-2:before { content: "\f10b"; }
+.flaticon-013-battery:before { content: "\f10c"; }
+.flaticon-014-film-roll:before { content: "\f10d"; }
+.flaticon-015-sd-card:before { content: "\f10e"; }
+.flaticon-016-len-1:before { content: "\f10f"; }
+.flaticon-017-len-2:before { content: "\f110"; }
+.flaticon-018-curve:before { content: "\f111"; }
+.flaticon-019-histogram:before { content: "\f112"; }
+.flaticon-020-photographer:before { content: "\f113"; }
+.flaticon-021-photographer-1:before { content: "\f114"; }
+.flaticon-022-portrait:before { content: "\f115"; }
+.flaticon-023-camera-3:before { content: "\f116"; }
+.flaticon-024-night-mode:before { content: "\f117"; }
+.flaticon-025-video-camera:before { content: "\f118"; }
+.flaticon-026-macro:before { content: "\f119"; }
+.flaticon-027-auto:before { content: "\f11a"; }
+.flaticon-028-landscape:before { content: "\f11b"; }
+.flaticon-029-sport-mode:before { content: "\f11c"; }
+.flaticon-030-album:before { content: "\f11d"; }
+.flaticon-031-monitor:before { content: "\f11e"; }
+.flaticon-032-flash-1:before { content: "\f11f"; }
+.flaticon-033-flash-2:before { content: "\f120"; }
+.flaticon-034-camera-4:before { content: "\f121"; }
+.flaticon-035-battery-1:before { content: "\f122"; }
+.flaticon-036-low-battery:before { content: "\f123"; }
+.flaticon-037-timer:before { content: "\f124"; }
+.flaticon-038-photography:before { content: "\f125"; }
+.flaticon-039-diaphragm:before { content: "\f126"; }
+.flaticon-040-light:before { content: "\f127"; }
+.flaticon-041-horizontal:before { content: "\f128"; }
+.flaticon-042-rule-of-thirds:before { content: "\f129"; }
+.flaticon-043-burst:before { content: "\f12a"; }
+.flaticon-044-panorama:before { content: "\f12b"; }
+.flaticon-045-polaroid:before { content: "\f12c"; }
+.flaticon-046-camera-5:before { content: "\f12d"; }
+.flaticon-047-polaroid-1:before { content: "\f12e"; }
+.flaticon-048-camera-6:before { content: "\f12f"; }
+.flaticon-049-camera-7:before { content: "\f130"; }
+.flaticon-050-camera-8:before { content: "\f131"; }
+    
+    $font-Flaticon-001-camera: "\f100";
+    $font-Flaticon-002-camera-1: "\f101";
+    $font-Flaticon-003-tripod: "\f102";
+    $font-Flaticon-004-spotlight: "\f103";
+    $font-Flaticon-005-spotlight-1: "\f104";
+    $font-Flaticon-006-soft-box: "\f105";
+    $font-Flaticon-007-umbrella: "\f106";
+    $font-Flaticon-008-flash: "\f107";
+    $font-Flaticon-009-len: "\f108";
+    $font-Flaticon-010-telephoto: "\f109";
+    $font-Flaticon-011-fisheye: "\f10a";
+    $font-Flaticon-012-camera-2: "\f10b";
+    $font-Flaticon-013-battery: "\f10c";
+    $font-Flaticon-014-film-roll: "\f10d";
+    $font-Flaticon-015-sd-card: "\f10e";
+    $font-Flaticon-016-len-1: "\f10f";
+    $font-Flaticon-017-len-2: "\f110";
+    $font-Flaticon-018-curve: "\f111";
+    $font-Flaticon-019-histogram: "\f112";
+    $font-Flaticon-020-photographer: "\f113";
+    $font-Flaticon-021-photographer-1: "\f114";
+    $font-Flaticon-022-portrait: "\f115";
+    $font-Flaticon-023-camera-3: "\f116";
+    $font-Flaticon-024-night-mode: "\f117";
+    $font-Flaticon-025-video-camera: "\f118";
+    $font-Flaticon-026-macro: "\f119";
+    $font-Flaticon-027-auto: "\f11a";
+    $font-Flaticon-028-landscape: "\f11b";
+    $font-Flaticon-029-sport-mode: "\f11c";
+    $font-Flaticon-030-album: "\f11d";
+    $font-Flaticon-031-monitor: "\f11e";
+    $font-Flaticon-032-flash-1: "\f11f";
+    $font-Flaticon-033-flash-2: "\f120";
+    $font-Flaticon-034-camera-4: "\f121";
+    $font-Flaticon-035-battery-1: "\f122";
+    $font-Flaticon-036-low-battery: "\f123";
+    $font-Flaticon-037-timer: "\f124";
+    $font-Flaticon-038-photography: "\f125";
+    $font-Flaticon-039-diaphragm: "\f126";
+    $font-Flaticon-040-light: "\f127";
+    $font-Flaticon-041-horizontal: "\f128";
+    $font-Flaticon-042-rule-of-thirds: "\f129";
+    $font-Flaticon-043-burst: "\f12a";
+    $font-Flaticon-044-panorama: "\f12b";
+    $font-Flaticon-045-polaroid: "\f12c";
+    $font-Flaticon-046-camera-5: "\f12d";
+    $font-Flaticon-047-polaroid-1: "\f12e";
+    $font-Flaticon-048-camera-6: "\f12f";
+    $font-Flaticon-049-camera-7: "\f130";
+    $font-Flaticon-050-camera-8: "\f131";

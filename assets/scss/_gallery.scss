@@ -1,0 +1,512 @@
+/*----------------------------------------*/
+/*  Gallery Style 1
+/*----------------------------------------*/
+.gallery-area {
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.gallery-carousel {}
+
+.gallery-carousel {
+    .owl-nav {
+        display: none;
+    }
+    .owl-dots {
+        display: none;
+    }
+    .item {
+        position: relative;
+        .gc-single {
+            position: relative;
+            max-width: 450px;
+            margin: 0 auto;
+            img {
+                max-height: 270px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.sbox_V1 {
+    margin-bottom: 40px;
+}
+
+/*------------- Gallery Style 1 END -------------*/
+
+
+
+/*----------------------------------------*/
+/*  Gallery Style 2
+/*----------------------------------------*/
+.fotolia-grid-2 {
+    margin-bottom: 40px;
+}
+.gallery4-area {
+    position: relative;
+    background-color: $primaryColor;
+    padding: 80px 0px;
+    text-align: center;
+}
+
+.singleg4-gallery {
+    position: relative;
+    margin: 60px auto;
+    max-width: 992px;
+    border: 20px solid $elementsColor;
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+    a {
+        position: relative;
+        display: block;
+        &:after {
+            position: absolute;
+            content: '';
+            height: 0;
+            width: 0;
+            background-color: rgba(0, 0, 0, .25);
+            top: 50%;
+            left: 50%;
+            transition: .5s ease;
+        }
+    }
+    &:hover {
+        a {
+            &:after {
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+
+/*------------- Gallery Style 2 END -------------*/
+
+
+
+
+/*----------------------------------------*/
+/*  Gallery Style 3
+/*----------------------------------------*/
+
+
+.g5header {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* ---- g5grid ---- */
+
+.g5grid {
+    background: #EEE;
+    max-width: 1200px;
+    margin: 50px auto 0px;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+
+/* ---- g5grid-item ---- */
+.gallery5-area {
+    position: relative;
+    padding: 40px 0px 80px;
+}
+.g5grid-item {
+    position: relative;
+    width: 240px;
+    height: 225px;
+    float: left;
+    background: #000;
+}
+
+.g5grid-item--width2 { width: 480px; }
+
+.g5grid-item--height2 { height: 450px; }
+
+.g5g-img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    a {
+        position: relative;
+        display: block;
+        height: 100%;
+        width: 100%;
+    
+        &:after {
+            position: absolute;
+            content: '';
+            height: 0;
+            width: 0;
+            background-color: rgba(0, 0, 0, .25);
+            top: 50%;
+            left: 50%;
+            transition: .5s ease;
+        }
+    }
+    &:hover {
+        a {
+            &:after {
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+/*------------- Gallery Style 3 END -------------*/
+
+
+
+
+
+
+/*----------------------------------------*/
+/*  Gallery Style 4
+/*----------------------------------------*/
+.gallery6-area {
+    position: relative;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 120px 0px 60px;
+}
+
+
+.gallery6-wrappper {
+    margin: 0px;
+      -webkit-column-count: 3; 
+      -moz-column-count: 3;
+      column-count: 3;
+      -webkit-column-gap: 0px;
+      -moz-column-gap: 0px;
+      column-gap: 0px;
+      -webkit-column-width: 33.33333333333333%;
+      -moz-column-width: 33.33333333333333%;
+      column-width: 33.33333333333333%;
+}
+
+.g6-single {
+    position: relative;
+    max-width: 370px;
+    margin: 0px auto 20px;
+    &:before {
+        position: absolute;
+        content: '';
+        height: 0%;
+        width: 0%;
+        background-color: rgba(26, 26, 26, 0.75);
+        top: 0;
+        left: 0;
+        @include transition(all,.5s,ease);
+        opacity: 0;
+        z-index: 1;
+    }
+    .g6s-info {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        top: calc(50% - 29px);
+        left: 0;
+        z-index: 1;
+        @include transition(all,.5s,ease);
+        text-align: center;
+        opacity: 0;
+        p {
+            font-size: 16px;
+            letter-spacing: 0px;
+            color: $primaryColor;
+        }
+        h4,
+        h4 a,
+        a {
+            color: $primaryColor;
+            font-size: 24px;
+            letter-spacing: 0px;
+            font-weight: 500;
+            line-height: 30px;
+        }
+    }
+    &:hover {
+        &:before {
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+        }
+        .g6s-info {
+            opacity: 1;
+            h4,
+            h4 a,
+            a,
+            p {
+                color: $elementsColor;
+            }
+        }
+    }
+    .g6s-img {
+        position: relative;
+    }
+}
+
+
+/*------------- Gallery Style 4 END -------------*/
+
+
+/*----------------------------------------*/
+/*  Album Style 1
+/*----------------------------------------*/
+.albums-area {
+    position: relative;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 120px 0px 60px;
+}
+.single-album {
+    position: relative;
+    max-width: 350px;
+    margin: 30px auto;
+    max-height: 407px;
+    overflow: hidden;
+    @include transition(all,.5s,ease);
+    .album-cat-title {
+        position: absolute;
+        height: calc(100% - 20px);
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 5px;
+        background-color: rgba(26, 26, 26, .25);
+        @include transition(all,.5s,ease);
+        text-align: center;
+        z-index: 4;
+        h4 {
+            color: $primaryColor;
+            font-size: 22px;
+            line-height: 34px;
+            letter-spacing: 0px;
+            font-weight: 400;
+            position: absolute;
+            bottom: 25px;
+            left: 15px;
+            @include transition(all,.5s,ease);
+        }
+        a {
+            color: $primaryColor;
+            font-size: 22px;
+            line-height: 34px;
+            letter-spacing: 0px;
+            font-weight: 400;
+            // position: absolute;
+            // bottom: 25px;
+            // left: 15px;
+            @include transition(all,.5s,ease);
+        
+            position: relative;
+            bottom: 0;
+            left: 0;
+            
+            display: block;
+            height: 100%;
+            width: 100%;
+            span {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: left;
+                padding: 0px 10px;
+            }
+            &:hover {
+                color: $elementsColor;
+            }
+        }
+    }
+    .s-album-img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        @include transition(all,.5s,ease);
+        img {
+            @include transition(all,.5s,ease);
+            &:first-child {
+                position: absolute;
+                left: 0;
+                bottom: 20px;
+                height: 100%;
+                width: 100%;
+                z-index: 3;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                left: 0;
+                bottom: 10px;
+                height: 100%;
+                width: 100%;
+                z-index: 2;
+            }
+            &:nth-child(3) {
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+            }
+        }
+    }
+    &:hover {
+        .s-album-img {
+            img {
+                &:first-child {
+                    bottom: 66.66666%;
+                }
+                &:nth-child(2) {
+                    bottom: 33.33333%;
+                }
+            }
+        }
+        .album-cat-title {
+            height: 100%;
+            background-color: rgba(26, 26, 26, .75);
+            opacity: 1;
+        }
+    }
+}
+
+/*------------- Album Style 1 END -------------*/
+
+
+
+/*----------------------------------------*/
+/*  Album Style 2
+/*----------------------------------------*/
+.single-album-V2 {
+    position: relative;
+    max-width: 540px;
+    margin: 15px auto;
+    &:hover {
+        .sa-text {
+            background-color: rgba(26, 26, 26, .75);
+        }
+    }
+    .sa-img {
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    .sa-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(26, 26, 26, .20);
+        @include transition(all,.5s,ease);
+        a {
+            font-size: 36px;
+            line-height: 44px;
+            color: $primaryColor;
+            letter-spacing: 0px;
+            font-weight: 500;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            &:hover {
+                color: $elementsColor;
+            }
+        }
+    }
+    
+}
+/*------------- Album Style 2 END -------------*/
+
+
+
+
+/*----------------------------------------*/
+/*  Album Style 3
+/*----------------------------------------*/
+
+.single-album-V3 {
+    position: relative;
+    max-width: 350px;
+    margin: 15px auto;
+    .sa-text {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        height: calc(100% - 30px);
+        width: calc(100% - 30px);
+        background-color: rgba(26, 26, 26, .50);
+        border: 2px solid $elementsColor;
+        text-align: center;
+        
+        opacity: 0;
+        @include transition(all,.5s,ease);
+        a {
+            position: relative;
+            font-size: 24px;
+            letter-spacing: 0px;
+            color: $primaryColor;
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding-top: 58%;
+            &:hover {
+                color: $elementsColor;
+            }
+        }
+    }
+    &:hover {
+        .sa-text {
+            opacity: 1;
+        }
+    }
+}
+
+/*------------- Album Style 3 END -------------*/
+
+
+
+.singleg3-gallery {
+    position: relative;
+    a {
+        position: relative;
+        display: block;
+        &:after {
+            position: absolute;
+            content: '';
+            height: 0;
+            width: 0;
+            background-color: rgba(0, 0, 0, .25);
+            top: 50%;
+            left: 50%;
+            transition: .5s ease;
+        }
+    }
+    &:hover {
+        a {
+            &:after {
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    
+}

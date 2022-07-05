@@ -1,0 +1,40 @@
+/*----------------------------------------*/
+/*  Instacarousel Style 1
+/*----------------------------------------*/
+
+.instagram-area {
+	position: relative;
+}
+.insta-carousel {
+	.item {
+		.single-insta-img {
+			position: relative;
+		}
+	}
+	.owl-nav {
+		display: none;
+	}
+	.owl-dots {
+		display: none;
+	}
+}
+.instagram-btn {
+	position: absolute;
+	display: inline-block;
+	top: calc(50% - 23px);
+	left: calc(50% - 110px);
+	z-index: 1;
+	a.insta-btn {
+		background-color: $primaryColor;
+		display: block;
+		width: 220px;
+		height: 46px;
+		text-align: center;
+		color: $tertiaryColor;
+		font-size: 16px;
+		padding-top: 6px;
+		border-radius: 5px;
+	}
+}
+
+/*------------- Instacarousel Style 1 END -------------*/

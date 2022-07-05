@@ -1,0 +1,3151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--- Basic Page Needs  -->
+    <meta charset="utf-8">
+    <title>Potolia - Multipurpose Photography HTML Template</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Specific Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Adamina" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Jquery ui CSS -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="assets/css/flaticon/flaticon.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- Nav Menu CSS -->
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="assets/css/nav-menu.css">
+    <!-- Void Mega Menu -->
+    <link rel="stylesheet" href="assets/css/vmm.menu.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Main StyleSheet CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+   <!-- <script src="country.js"></script> -->
+    <script>
+
+        function displayRadioValue() {
+            var ele = document.getElementsByName('user');
+            document.getElementById('contactus').style.display = "none";
+
+            var val;
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked) {
+                    if (ele[i].value == "customer") {
+                        document.getElementById('customer').style.display = "block";
+                        document.getElementById('freelancer').style.display = "none";
+                    }
+                    else {
+                        document.getElementById('freelancer').style.display = "block";
+                        document.getElementById('customer').style.display = "none";
+
+                    }
+
+                }
+            }
+        }
+
+
+        function validate() {
+            
+            var name = document.getElementById("name").value;
+            if (name == "") {
+                alert("Enter the name");
+                return false;
+            } 
+
+            var contactnumber = document.getElementById("contactnumber").value;
+            if (contactnumber == "") {
+                alert("Enter the Contact number");
+                return false;
+            } 
+
+            var whatsappnumber = document.reg_form.whatsappnumber;
+            var email = document.reg_form.email;
+            var location = document.reg_form.location;
+            var date = document.reg_form.date;
+            var event = document.reg_form.event;
+            var description = document.reg_form.description;
+            var budget = document.reg_form.budget;
+
+            if (name.value.length <= 0) {
+                alert("Name is required");
+                name.focus();
+                return false;
+            }
+            if (contact.value.length <= 0) {
+                alert("Contact number is required");
+                contact.focus();
+                return false;
+            }
+            if (whatsapp.value.length <= 0) {
+                alert("Whatsapp number is required");
+                whatsapp.focus();
+                return false;
+
+
+                if (email.value.length <= 0) {
+                    alert("Email Id is required");
+                    email.focus();
+                    return false;
+                }
+                if (location.value.length <= 0) {
+                    alert("location is required");
+                    location.focus();
+                    return false;
+                }
+                if (date.value.length <= 0) {
+                    alert("date is required");
+                    date.focus();
+                    return false;
+                }
+                if (event.value == "select course") {
+                    alert("event is required");
+                    event.focus();
+                    return false;
+                }
+                return false;
+            }
+            var checkList = document.getElementById('list1');
+            checkList.getElementsByClassName('anchor')[0].onclick = function (evt) {
+                if (checkList.classList.contains('visible'))
+                    checkList.classList.remove('visible');
+                else
+                    checkList.classList.add('visible');
+            }
+
+            checkList.onblur = function (evt) {
+                checkList.classList.remove('visible');
+            }
+        }
+
+        var freelancerStateObject = {
+            India: {
+                Kerala: [
+                    "Alappuzha",
+                    "Ernakulam",
+                    "Idukki",
+                    "Kannur",
+                    "Kasaragod",
+                    "Kollam",
+                    "Kottayam",
+                    "Kozhikode",
+                    "Malappuram",
+                    "Palakkad",
+                    "Pathanamthitta",
+                    "Thiruvananthapuram",
+                    "Thrissur",
+                    "Wayanad",
+                ],
+            },
+        };
+
+        var stateObject = {
+            India: {
+                "Andhra Pradesh": [
+                    "Anantapur",
+                    "Chittoor",
+                    "East Godavari",
+                    "Guntur",
+                    "Krishna",
+                    "Kurnool",
+                    "Nellore",
+                    "Prakasam",
+                    "Srikakulam",
+                    "Visakhapatnam",
+                    "Vizianagaram",
+                    "West Godavari",
+                    "YSR Kadapa",
+                ],
+
+                "Arunachal Pradesh": [
+                    "Tawang",
+                    "West Kameng",
+                    "East Kameng",
+                    "Papum Pare",
+                    "Kurung Kumey",
+                    "Kra Daadi",
+                    "Lower Subansiri",
+                    "Upper Subansiri",
+                    "West Siang",
+                    "East Siang",
+                    "Siang",
+                    "Upper Siang",
+                    "Lower Siang",
+                    "Lower Dibang Valley",
+                    "Dibang Valley",
+                    "Anjaw",
+                    "Lohit",
+                    "Namsai",
+                    "Changlang",
+                    "Tirap",
+                    "Longding",
+                ],
+
+                Assam: [
+                    "Baksa",
+                    "Barpeta",
+                    "Biswanath",
+                    "Bongaigaon",
+                    "Cachar",
+                    "Charaideo",
+                    "Chirang",
+                    "Darrang",
+                    "Dhemaji",
+                    "Dhubri",
+                    "Dibrugarh",
+                    "Goalpara",
+                    "Golaghat",
+                    "Hailakandi",
+                    "Hojai",
+                    "Jorhat",
+                    "Kamrup Metropolitan",
+                    "Kamrup",
+                    "Karbi Anglong",
+                    "Karimganj",
+                    "Kokrajhar",
+                    "Lakhimpur",
+                    "Majuli",
+                    "Morigaon",
+                    "Nagaon",
+                    "Nalbari",
+                    "Dima Hasao",
+                    "Sivasagar",
+                    "Sonitpur",
+                    "South Salmara-Mankachar",
+                    "Tinsukia",
+                    "Udalguri",
+                    "West Karbi Anglong",
+                ],
+                Bihar: [
+                    "Araria",
+                    "Arwal",
+                    "Aurangabad",
+                    "Banka",
+                    "Begusarai",
+                    "Bhagalpur",
+                    "Bhojpur",
+                    "Buxar",
+                    "Darbhanga",
+                    "East Champaran (Motihari)",
+                    "Gaya",
+                    "Gopalganj",
+                    "Jamui",
+                    "Jehanabad",
+                    "Kaimur (Bhabua)",
+                    "Katihar",
+                    "Khagaria",
+                    "Kishanganj",
+                    "Lakhisarai",
+                    "Madhepura",
+                    "Madhubani",
+                    "Munger (Monghyr)",
+                    "Muzaffarpur",
+                    "Nalanda",
+                    "Nawada",
+                    "Patna",
+                    "Purnia (Purnea)",
+                    "Rohtas",
+                    "Saharsa",
+                    "Samastipur",
+                    "Saran",
+                    "Sheikhpura",
+                    "Sheohar",
+                    "Sitamarhi",
+                    "Siwan",
+                    "Supaul",
+                    "Vaishali",
+                    "West Champaran",
+                ],
+                "Chandigarh (UT)": ["Chandigarh"],
+
+                Chhattisgarh: [
+                    "Balod",
+                    "Baloda Bazar",
+                    "Balrampur",
+                    "Bastar",
+                    "Bemetara",
+                    "Bijapur",
+                    "Bilaspur",
+                    "Dantewada (South Bastar)",
+                    "Dhamtari",
+                    "Durg",
+                    "Gariyaband",
+                    "Janjgir-Champa",
+                    "Jashpur",
+                    "Kabirdham (Kawardha)",
+                    "Kanker (North Bastar)",
+                    "Kondagaon",
+                    "Korba",
+                    "Korea (Koriya)",
+                    "Mahasamund",
+                    "Mungeli",
+                    "Narayanpur",
+                    "Raigarh",
+                    "Raipur",
+                    "Rajnandgaon",
+                    "Sukma",
+                    "Surajpur  ",
+                    "Surguja",
+                ],
+                "Dadra and Nagar Haveli (UT)": ["Dadra & Nagar Haveli"],
+
+                "Daman and Diu (UT)": ["Daman", "Diu"],
+                "Delhi (NCT)": [
+                    "Central Delhi",
+                    "East Delhi",
+                    "New Delhi",
+                    "North Delhi",
+                    "North East  Delhi",
+                    "North West  Delhi",
+                    "Shahdara",
+                    "South Delhi",
+                    "South East Delhi",
+                    "South West  Delhi",
+                    "West Delhi",
+                ],
+                Goa: ["North Goa", "South Goa"],
+                Gujarat: [
+                    "Ahmedabad",
+                    "Amreli",
+                    "Anand",
+                    "Aravalli",
+                    "Banaskantha (Palanpur)",
+                    "Bharuch",
+                    "Bhavnagar",
+                    "Botad",
+                    "Chhota Udepur",
+                    "Dahod",
+                    "Dangs (Ahwa)",
+                    "Devbhoomi Dwarka",
+                    "Gandhinagar",
+                    "Gir Somnath",
+                    "Jamnagar",
+                    "Junagadh",
+                    "Kachchh",
+                    "Kheda (Nadiad)",
+                    "Mahisagar",
+                    "Mehsana",
+                    "Morbi",
+                    "Narmada (Rajpipla)",
+                    "Navsari",
+                    "Panchmahal (Godhra)",
+                    "Patan",
+                    "Porbandar",
+                    "Rajkot",
+                    "Sabarkantha (Himmatnagar)",
+                    "Surat",
+                    "Surendranagar",
+                    "Tapi (Vyara)",
+                    "Vadodara",
+                    "Valsad",
+                ],
+                Haryana: [
+                    "Ambala",
+                    "Bhiwani",
+                    "Charkhi Dadri",
+                    "Faridabad",
+                    "Fatehabad",
+                    "Gurgaon",
+                    "Hisar",
+                    "Jhajjar",
+                    "Jind",
+                    "Kaithal",
+                    "Karnal",
+                    "Kurukshetra",
+                    "Mahendragarh",
+                    "Mewat",
+                    "Palwal",
+                    "Panchkula",
+                    "Panipat",
+                    "Rewari",
+                    "Rohtak",
+                    "Sirsa",
+                    "Sonipat",
+                    "Yamunanagar",
+                ],
+                "Himachal Pradesh": [
+                    "Bilaspur",
+                    "Chamba",
+                    "Hamirpur",
+                    "Kangra",
+                    "Kinnaur",
+                    "Kullu",
+                    "Lahaul &amp; Spiti",
+                    "Mandi",
+                    "Shimla",
+                    "Sirmaur (Sirmour)",
+                    "Solan",
+                    "Una",
+                ],
+                "Jammu and Kashmir": [
+                    "Anantnag",
+                    "Bandipore",
+                    "Baramulla",
+                    "Budgam",
+                    "Doda",
+                    "Ganderbal",
+                    "Jammu",
+                    "Kargil",
+                    "Kathua",
+                    "Kishtwar",
+                    "Kulgam",
+                    "Kupwara",
+                    "Leh",
+                    "Poonch",
+                    "Pulwama",
+                    "Rajouri",
+                    "Ramban",
+                    "Reasi",
+                    "Samba",
+                    "Shopian",
+                    "Srinagar",
+                    "Udhampur",
+                ],
+                Jharkhand: [
+                    "Bokaro",
+                    "Chatra",
+                    "Deoghar",
+                    "Dhanbad",
+                    "Dumka",
+                    "East Singhbhum",
+                    "Garhwa",
+                    "Giridih",
+                    "Godda",
+                    "Gumla",
+                    "Hazaribag",
+                    "Jamtara",
+                    "Khunti",
+                    "Koderma",
+                    "Latehar",
+                    "Lohardaga",
+                    "Pakur",
+                    "Palamu",
+                    "Ramgarh",
+                    "Ranchi",
+                    "Sahibganj",
+                    "Seraikela-Kharsawan",
+                    "Simdega",
+                    "West Singhbhum",
+                ],
+                Karnataka: [
+                    "Bagalkot",
+                    "Ballari (Bellary)",
+                    "Belagavi (Belgaum)",
+                    "Bengaluru (Bangalore) Rural",
+                    "Bengaluru (Bangalore) Urban",
+                    "Bidar",
+                    "Chamarajanagar",
+                    "Chikballapur",
+                    "Chikkamagaluru (Chikmagalur)",
+                    "Chitradurga",
+                    "Dakshina Kannada",
+                    "Davangere",
+                    "Dharwad",
+                    "Gadag",
+                    "Hassan",
+                    "Haveri",
+                    "Kalaburagi (Gulbarga)",
+                    "Kodagu",
+                    "Kolar",
+                    "Koppal",
+                    "Mandya",
+                    "Mysuru (Mysore)",
+                    "Raichur",
+                    "Ramanagara",
+                    "Shivamogga (Shimoga)",
+                    "Tumakuru (Tumkur)",
+                    "Udupi",
+                    "Uttara Kannada (Karwar)",
+                    "Vijayapura (Bijapur)",
+                    "Yadgir",
+                ],
+                Kerala: [
+                    "Alappuzha",
+                    "Ernakulam",
+                    "Idukki",
+                    "Kannur",
+                    "Kasaragod",
+                    "Kollam",
+                    "Kottayam",
+                    "Kozhikode",
+                    "Malappuram",
+                    "Palakkad",
+                    "Pathanamthitta",
+                    "Thiruvananthapuram",
+                    "Thrissur",
+                    "Wayanad",
+                ],
+                "Lakshadweep (UT)": [
+                    "Agatti",
+                    "Amini",
+                    "Androth",
+                    "Bithra",
+                    "Chethlath",
+                    "Kavaratti",
+                    "Kadmath",
+                    "Kalpeni",
+                    "Kilthan",
+                    "Minicoy",
+                ],
+                "Madhya Pradesh": [
+                    "Agar Malwa",
+                    "Alirajpur",
+                    "Anuppur",
+                    "Ashoknagar",
+                    "Balaghat",
+                    "Barwani",
+                    "Betul",
+                    "Bhind",
+                    "Bhopal",
+                    "Burhanpur",
+                    "Chhatarpur",
+                    "Chhindwara",
+                    "Damoh",
+                    "Datia",
+                    "Dewas",
+                    "Dhar",
+                    "Dindori",
+                    "Guna",
+                    "Gwalior",
+                    "Harda",
+                    "Hoshangabad",
+                    "Indore",
+                    "Jabalpur",
+                    "Jhabua",
+                    "Katni",
+                    "Khandwa",
+                    "Khargone",
+                    "Mandla",
+                    "Mandsaur",
+                    "Morena",
+                    "Narsinghpur",
+                    "Neemuch",
+                    "Panna",
+                    "Raisen",
+                    "Rajgarh",
+                    "Ratlam",
+                    "Rewa",
+                    "Sagar",
+                    "Satna",
+                    "Sehore",
+                    "Seoni",
+                    "Shahdol",
+                    "Shajapur",
+                    "Sheopur",
+                    "Shivpuri",
+                    "Sidhi",
+                    "Singrauli",
+                    "Tikamgarh",
+                    "Ujjain",
+                    "Umaria",
+                    "Vidisha",
+                ],
+                Maharashtra: [
+                    "Ahmednagar",
+                    "Akola",
+                    "Amravati",
+                    "Aurangabad",
+                    "Beed",
+                    "Bhandara",
+                    "Buldhana",
+                    "Chandrapur",
+                    "Dhule",
+                    "Gadchiroli",
+                    "Gondia",
+                    "Hingoli",
+                    "Jalgaon",
+                    "Jalna",
+                    "Kolhapur",
+                    "Latur",
+                    "Mumbai City",
+                    "Mumbai Suburban",
+                    "Nagpur",
+                    "Nanded",
+                    "Nandurbar",
+                    "Nashik",
+                    "Osmanabad",
+                    "Palghar",
+                    "Parbhani",
+                    "Pune",
+                    "Raigad",
+                    "Ratnagiri",
+                    "Sangli",
+                    "Satara",
+                    "Sindhudurg",
+                    "Solapur",
+                    "Thane",
+                    "Wardha",
+                    "Washim",
+                    "Yavatmal",
+                ],
+                Manipur: [
+                    "Bishnupur",
+                    "Chandel",
+                    "Churachandpur",
+                    "Imphal East",
+                    "Imphal West",
+                    "Jiribam",
+                    "Kakching",
+                    "Kamjong",
+                    "Kangpokpi",
+                    "Noney",
+                    "Pherzawl",
+                    "Senapati",
+                    "Tamenglong",
+                    "Tengnoupal",
+                    "Thoubal",
+                    "Ukhrul",
+                ],
+                Meghalaya: [
+                    "East Garo Hills",
+                    "East Jaintia Hills",
+                    "East Khasi Hills",
+                    "North Garo Hills",
+                    "Ri Bhoi",
+                    "South Garo Hills",
+                    "South West Garo Hills ",
+                    "South West Khasi Hills",
+                    "West Garo Hills",
+                    "West Jaintia Hills",
+                    "West Khasi Hills",
+                ],
+                Mizoram: [
+                    "Aizawl",
+                    "Champhai",
+                    "Kolasib",
+                    "Lawngtlai",
+                    "Lunglei",
+                    "Mamit",
+                    "Saiha",
+                    "Serchhip",
+                ],
+                Nagaland: [
+                    "Dimapur",
+                    "Kiphire",
+                    "Kohima",
+                    "Longleng",
+                    "Mokokchung",
+                    "Mon",
+                    "Peren",
+                    "Phek",
+                    "Tuensang",
+                    "Wokha",
+                    "Zunheboto",
+                ],
+                Odisha: [
+                    "Angul",
+                    "Balangir",
+                    "Balasore",
+                    "Bargarh",
+                    "Bhadrak",
+                    "Boudh",
+                    "Cuttack",
+                    "Deogarh",
+                    "Dhenkanal",
+                    "Gajapati",
+                    "Ganjam",
+                    "Jagatsinghapur",
+                    "Jajpur",
+                    "Jharsuguda",
+                    "Kalahandi",
+                    "Kandhamal",
+                    "Kendrapara",
+                    "Kendujhar (Keonjhar)",
+                    "Khordha",
+                    "Koraput",
+                    "Malkangiri",
+                    "Mayurbhanj",
+                    "Nabarangpur",
+                    "Nayagarh",
+                    "Nuapada",
+                    "Puri",
+                    "Rayagada",
+                    "Sambalpur",
+                    "Sonepur",
+                    "Sundargarh",
+                ],
+                "Puducherry (UT)": ["Karaikal", "Mahe", "Pondicherry", "Yanam"],
+                Punjab: [
+                    "Amritsar",
+                    "Barnala",
+                    "Bathinda",
+                    "Faridkot",
+                    "Fatehgarh Sahib",
+                    "Fazilka",
+                    "Ferozepur",
+                    "Gurdaspur",
+                    "Hoshiarpur",
+                    "Jalandhar",
+                    "Kapurthala",
+                    "Ludhiana",
+                    "Mansa",
+                    "Moga",
+                    "Muktsar",
+                    "Nawanshahr (Shahid Bhagat Singh Nagar)",
+                    "Pathankot",
+                    "Patiala",
+                    "Rupnagar",
+                    "Sahibzada Ajit Singh Nagar (Mohali)",
+                    "Sangrur",
+                    "Tarn Taran",
+                ],
+                Rajasthan: [
+                    "Ajmer",
+                    "Alwar",
+                    "Banswara",
+                    "Baran",
+                    "Barmer",
+                    "Bharatpur",
+                    "Bhilwara",
+                    "Bikaner",
+                    "Bundi",
+                    "Chittorgarh",
+                    "Churu",
+                    "Dausa",
+                    "Dholpur",
+                    "Dungarpur",
+                    "Hanumangarh",
+                    "Jaipur",
+                    "Jaisalmer",
+                    "Jalore",
+                    "Jhalawar",
+                    "Jhunjhunu",
+                    "Jodhpur",
+                    "Karauli",
+                    "Kota",
+                    "Nagaur",
+                    "Pali",
+                    "Pratapgarh",
+                    "Rajsamand",
+                    "Sawai Madhopur",
+                    "Sikar",
+                    "Sirohi",
+                    "Sri Ganganagar",
+                    "Tonk",
+                    "Udaipur",
+                ],
+                Sikkim: ["East Sikkim", "North Sikkim", "South Sikkim", "West Sikkim"],
+                "Tamil Nadu": [
+                    "Ariyalur",
+                    "Chennai",
+                    "Coimbatore",
+                    "Cuddalore",
+                    "Dharmapuri",
+                    "Dindigul",
+                    "Erode",
+                    "Kanchipuram",
+                    "Kanyakumari",
+                    "Karur",
+                    "Krishnagiri",
+                    "Madurai",
+                    "Nagapattinam",
+                    "Namakkal",
+                    "Nilgiris",
+                    "Perambalur",
+                    "Pudukkottai",
+                    "Ramanathapuram",
+                    "Salem",
+                    "Sivaganga",
+                    "Thanjavur",
+                    "Theni",
+                    "Thoothukudi (Tuticorin)",
+                    "Tiruchirappalli",
+                    "Tirunelveli",
+                    "Tiruppur",
+                    "Tiruvallur",
+                    "Tiruvannamalai",
+                    "Tiruvarur",
+                    "Vellore",
+                    "Viluppuram",
+                    "Virudhunagar",
+                ],
+                Telangana: [
+                    "Adilabad",
+                    "Bhadradri Kothagudem",
+                    "Hyderabad",
+                    "Jagtial",
+                    "Jangaon",
+                    "Jayashankar Bhoopalpally",
+                    "Jogulamba Gadwal",
+                    "Kamareddy",
+                    "Karimnagar",
+                    "Khammam",
+                    "Komaram Bheem Asifabad",
+                    "Mahabubabad",
+                    "Mahabubnagar",
+                    "Mancherial",
+                    "Medak",
+                    "Medchal",
+                    "Nagarkurnool",
+                    "Nalgonda",
+                    "Nirmal",
+                    "Nizamabad",
+                    "Peddapalli",
+                    "Rajanna Sircilla",
+                    "Rangareddy",
+                    "Sangareddy",
+                    "Siddipet",
+                    "Suryapet",
+                    "Vikarabad",
+                    "Wanaparthy",
+                    "Warangal (Rural)",
+                    "Warangal (Urban)",
+                    "Yadadri Bhuvanagiri",
+                ],
+                Tripura: [
+                    "Dhalai",
+                    "Gomati",
+                    "Khowai",
+                    "North Tripura",
+                    "Sepahijala",
+                    "South Tripura",
+                    "Unakoti",
+                    "West Tripura",
+                ],
+                Uttarakhand: [
+                    "Almora",
+                    "Bageshwar",
+                    "Chamoli",
+                    "Champawat",
+                    "Dehradun",
+                    "Haridwar",
+                    "Nainital",
+                    "Pauri Garhwal",
+                    "Pithoragarh",
+                    "Rudraprayag",
+                    "Tehri Garhwal",
+                    "Udham Singh Nagar",
+                    "Uttarkashi",
+                ],
+                "Uttar Pradesh": [
+                    "Agra",
+                    "Aligarh",
+                    "Allahabad",
+                    "Ambedkar Nagar",
+                    "Amethi (Chatrapati Sahuji Mahraj Nagar)",
+                    "Amroha (J.P. Nagar)",
+                    "Auraiya",
+                    "Azamgarh",
+                    "Baghpat",
+                    "Bahraich",
+                    "Ballia",
+                    "Balrampur",
+                    "Banda",
+                    "Barabanki",
+                    "Bareilly",
+                    "Basti",
+                    "Bhadohi",
+                    "Bijnor",
+                    "Budaun",
+                    "Bulandshahr",
+                    "Chandauli",
+                    "Chitrakoot",
+                    "Deoria",
+                    "Etah",
+                    "Etawah",
+                    "Faizabad",
+                    "Farrukhabad",
+                    "Fatehpur",
+                    "Firozabad",
+                    "Gautam Buddha Nagar",
+                    "Ghaziabad",
+                    "Ghazipur",
+                    "Gonda",
+                    "Gorakhpur",
+                    "Hamirpur",
+                    "Hapur (Panchsheel Nagar)",
+                    "Hardoi",
+                    "Hathras",
+                    "Jalaun",
+                    "Jaunpur",
+                    "Jhansi",
+                    "Kannauj",
+                    "Kanpur Dehat",
+                    "Kanpur Nagar",
+                    "Kanshiram Nagar (Kasganj)",
+                    "Kaushambi",
+                    "Kushinagar (Padrauna)",
+                    "Lakhimpur - Kheri",
+                    "Lalitpur",
+                    "Lucknow",
+                    "Maharajganj",
+                    "Mahoba",
+                    "Mainpuri",
+                    "Mathura",
+                    "Mau",
+                    "Meerut",
+                    "Mirzapur",
+                    "Moradabad",
+                    "Muzaffarnagar",
+                    "Pilibhit",
+                    "Pratapgarh",
+                    "RaeBareli",
+                    "Rampur",
+                    "Saharanpur",
+                    "Sambhal (Bhim Nagar)",
+                    "Sant Kabir Nagar",
+                    "Shahjahanpur",
+                    "Shamali (Prabuddh Nagar)",
+                    "Shravasti",
+                    "Siddharth Nagar",
+                    "Sitapur",
+                    "Sonbhadra",
+                    "Sultanpur",
+                    "Unnao",
+                    "Varanasi",
+                ],
+                "West Bengal": [
+                    "Alipurduar",
+                    "Bankura",
+                    "Birbhum",
+                    "Burdwan (Bardhaman)",
+                    "Cooch Behar",
+                    "Dakshin Dinajpur (South Dinajpur)",
+                    "Darjeeling",
+                    "Hooghly",
+                    "Howrah",
+                    "Jalpaiguri",
+                    "Kalimpong",
+                    "Kolkata",
+                    "Malda",
+                    "Murshidabad",
+                    "Nadia",
+                    "North 24 Parganas",
+                    "Paschim Medinipur (West Medinipur)",
+                    "Purba Medinipur (East Medinipur)",
+                    "Purulia",
+                    "South 24 Parganas",
+                    "Uttar Dinajpur (North Dinajpur)",
+                ],
+            },
+        };
+        window.onload = function () {
+
+
+            var form = document.getElementById('customerForm');
+            if (form != null) {
+                form.addEventListener("submit", e => {
+                    e.preventDefault();
+                    fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(document.getElementById("customerForm")),
+                    }).then(
+                        response => response.json()
+                    ).then((html) => {
+                        alert('Saved successfully');
+                        window.location.href = "index.html";
+                    });
+                });
+            }
+
+            var freelancerForm = document.getElementById('freelancerForm');
+            if (freelancerForm != null) {
+                freelancerForm.addEventListener("submit", e => {
+                    e.preventDefault();
+                    fetch(freelancerForm.action, {
+                        method: "POST",
+                        body: new FormData(document.getElementById("freelancerForm")),
+                    }).then(
+                        response => response.json()
+                    ).then((html) => {
+                        alert('Saved successfully');
+                        window.location.href = "index.html";
+                    });
+                });
+            }
+
+            var customerCountrySel = document.getElementById("customerCountrySel"),
+                customerStateSel = document.getElementById("customerStateSel"),
+                customerDistrictSel = document.getElementById("customerDistrictSel"),
+
+                freelancerStateSel = document.getElementById("freelancerStateSel"),
+                freelancerDistrictSel = document.getElementById("freelancerDistrictSel");
+
+            for (var country in stateObject) {
+                customerCountrySel.options[customerCountrySel.options.length] = new Option(
+                    country,
+                    country
+                );
+            }
+            customerCountrySel.onchange = function () {
+                customerStateSel.length = 1; // remove all options bar first
+                customerDistrictSel.length = 1; // remove all options bar first
+                if (this.selectedIndex < 1) return; // done
+                for (var state in stateObject[this.value]) {
+                    customerStateSel.options[customerStateSel.options.length] = new Option(state, state);
+                }
+            };
+            customerCountrySel.onchange(); // reset in case page is reloaded
+            customerStateSel.onchange = function () {
+                customerDistrictSel.length = 1; // remove all options bar first
+                if (this.selectedIndex < 1) return; // done
+                var district = stateObject[customerCountrySel.value][this.value];
+                for (var i = 0; i < district.length; i++) {
+                    customerDistrictSel.options[customerDistrictSel.options.length] = new Option(
+                        district[i],
+                        district[i]
+                    );
+                }
+            };
+
+
+
+        
+
+        }
+
+
+
+
+    </script>
+    <style>
+
+
+
+            /* The Modal (background) */
+            .ebcf_modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              padding-top: 100px; /* Location of the box */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          }
+          
+          /* Modal Content */
+          .ebcf_modal-content {
+              background-color: #fefefe;
+              margin: auto;
+              padding: 20px;
+              border: 1px solid #888;
+              width: 80%;
+          }
+          
+          /* The Close Button */
+          .ebcf_close {
+              color: #aaaaaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+          }
+          
+          .ebcf_close:hover,
+          .ebcf_close:focus {
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+          }
+
+         
+         .modal-content form {
+            padding: 16px;
+            border: 1px solid #ccc;
+          }
+         .modal-content label,
+          .modal-content input,
+          .modal-content textarea,
+          .modal-content select {
+            display: block;
+            width: 100%;
+          }
+          input,
+          textarea,
+          select {
+            line-height: 24px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+          }
+          input,
+          select {
+            height: 24px;
+          }
+          input[type="checkbox"],
+          input[type="radio"] {
+            position: relative;
+            bottom: -2px;
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            margin-left: 8px;
+          }
+          textarea {
+            height: 48px;
+          }
+          pre {
+            background: greenyellow;
+            padding: 16px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            overflow: hidden;
+          }
+        
+        .contact-info {
+        padding-bottom: 10px;
+        width: 400px;
+        margin: auto;
+        padding-top: 10px;
+        border: 1px soild silver;
+        font-family: serif;
+        background-color:#9bf542;}
+        .mail h2 {
+        margin-left: 38px;
+        text-align: center;
+        font-family: serif;
+        }
+
+        #contactus {
+            color: black;
+            font-size: x-large;
+        }
+
+        table {
+            font-size: medium;
+
+            color: black;
+        }
+
+        .checkboxes input {
+
+            vertical-align: middle;
+
+        }
+
+        .checkboxes label span {
+
+            vertical-align: middle;
+
+        }
+
+        .pay {
+            font-style: italic;
+            font-size: larger;
+
+        }
+
+        h2 {
+            text-align: center;
+
+
+        }
+
+        .modal-btn {
+            width: 150px;
+            height: 40px;
+            margin: 0 auto;
+            padding: 0;
+            display: inline-block;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader"></div>
+
+    <!-- Header Area -->
+    <header class="header-area fotolia-header header_1">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="tb-contact-info">
+                            <div class="phone-mail">
+                                <span><i class="fa fa-phone" aria-hidden="true"></i>+44 5858 9595 75 | +22 8484 5959
+                                    25</span>
+                                <span><i class="fa fa-envelope" aria-hidden="true"></i>domain@address.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="tb-contact-info">
+                            <div class="location">
+                                <span><i class="fa fa-map-marker" aria-hidden="true"></i>10 Stert View, Stro Road, New
+                                    York, USA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="voidmega-header">
+            <div class="container">
+                <div class="bgvm">
+                    <div class="row">
+                        <div class="col-12 col-xl-10">
+
+
+                            <div class="vmm-header header-transparent-on vmm-mega-menu mega-menu-fullwidth">
+                                <div class="container">
+
+                                    <!-- vmm header -->
+                                    <div class="vmm-header-container">
+
+                                        <!--Logo-->
+                                        <div class="logo" data-mobile-logo="assets/img/logo-1.png"
+                                            data-sticky-logo="assets/img/logo-2.png">
+                                            <a href="index.html"><img src="assets/img/logo-1.png" alt="logo" /></a>
+                                        </div>
+
+                                        <!-- Burger menu -->
+                                        <div class="burger-menu">
+                                            <div class="line-menu line-half first-line"></div>
+                                            <div class="line-menu"></div>
+                                            <div class="line-menu line-half last-line"></div>
+                                        </div>
+
+                                        <!--Navigation menu-->
+                                        <nav class="vmm-menu menu-caret submenu-scale">
+                                            <ul>
+                                                <li class="mega-menu"><a href="index.html">Home</a>
+                                                    <ul>
+                                                        <li>
+
+                                                            <!-- Mega menu container -->
+                                                            <div class="mega-menu-container">
+                                                                <div class="row">
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index.html">
+                                                                                    <img src="assets/img/vmm-thumb/mega-menu-thumbnail-01.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index.html">Home 1</a></h4>
+                                                                            <!-- <div class="mega-menu-desc">
+                                                                                Donec tellus faucibus dolor viverra neca blandit at justo pendisse dolor turpis lobortis sodales felis justo hendrerit fermentum quam fusce mattis nibh nulla.
+                                                                            </div> -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-2.html">
+                                                                                    <img src="assets/img/vmm-thumb/mega-menu-thumbnail-02.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-2.html">Home 2</a></h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-3.html">
+                                                                                    <img src="assets/img/vmm-thumb/mega-menu-thumbnail-03.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-3.html">Home 3</a></h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-4.html">
+                                                                                    <img src="assets/img/vmm-thumb/mega-menu-thumbnail-04.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-4.html">Home 4</a></h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-5.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-05.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-5.html">Home 5</a></h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-6.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-06.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-6.html">Home 6</a></h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-7.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-07.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-7.html">Home 7</a></h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-8.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-08.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-8.html">Home 8</a></h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-9.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-09.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-9.html">Home 9</a></h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-10.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-10.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-10.html">Home 10</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-11.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-11.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-11.html">Home 11</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-12.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-12.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-12.html">Home 12</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-13.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-13.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-13.html">Home 13</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-14.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-14.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-14.html">Home 14</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-15.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-15.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-15.html">Home 15</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-16.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-16.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-16.html">Home 16</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-17.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-17.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-17.html">Home 17</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-18.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-18.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-18.html">Home 18</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-19.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-19.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-19.html">Home 19</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-20.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-20.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-20.html">Home 20</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-21.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-21.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-21.html">Home 21</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-22.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-22.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-22.html">Home 22</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="index-23.html">
+                                                                                    <img src="assets/img/vmm-thumb/home-thumbnail-23.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="index-23.html">Home 23</a>
+                                                                            </h4>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-menu"><a href="#">Gallery</a>
+                                                    <ul>
+                                                        <li>
+
+                                                            <!-- Mega menu container -->
+                                                            <div class="mega-menu-container">
+                                                                <div class="row">
+
+                                                                    <!-- Column -->
+                                                                    <div class="col-lg-4">
+
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-media">
+                                                                                <div class="mega-menu-media-img">
+                                                                                    <div class="mega-menu-thumbnail">
+                                                                                        <a href="portfolio-1.html">
+                                                                                            <img src="assets/img/vmm-thumb/mega-menu-thumbnail-05.jpg"
+                                                                                                alt="thumbnail" />
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="mega-menu-media-info">
+                                                                                    <h4 class="mega-menu-heading"><a
+                                                                                            href="portfolio-1.html">Portfolio
+                                                                                            1</a></h4>
+                                                                                    <div class="mega-menu-desc">
+                                                                                        Showcase for your Awesome
+                                                                                        photos.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-media">
+                                                                                <div class="mega-menu-media-img">
+                                                                                    <div class="mega-menu-thumbnail">
+                                                                                        <a href="portfolio-2.html">
+                                                                                            <img src="assets/img/vmm-thumb/mega-menu-thumbnail-06.jpg"
+                                                                                                alt="thumbnail" />
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="mega-menu-media-info">
+                                                                                    <h4 class="mega-menu-heading"><a
+                                                                                            href="portfolio-2.html">Portfolio
+                                                                                            2</a></h4>
+                                                                                    <div class="mega-menu-desc">
+                                                                                        Display all your clicked photo.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-media">
+                                                                                <div class="mega-menu-media-img">
+                                                                                    <div class="mega-menu-thumbnail">
+                                                                                        <a href="portfolio-3.html">
+                                                                                            <img src="assets/img/vmm-thumb/mega-menu-thumbnail-07.jpg"
+                                                                                                alt="thumbnail" />
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="mega-menu-media-info">
+                                                                                    <h4 class="mega-menu-heading"><a
+                                                                                            href="portfolio-3.html">Portfolio
+                                                                                            3</a></h4>
+                                                                                    <div class="mega-menu-desc">
+                                                                                        Your clicked photo display zone.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <!-- Column -->
+                                                                    <div class="col-lg-4">
+
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-media">
+                                                                                <div class="mega-menu-media-img">
+                                                                                    <div class="mega-menu-thumbnail">
+                                                                                        <a href="portfolio-4.html">
+                                                                                            <img src="assets/img/vmm-thumb/mega-menu-thumbnail-08.jpg"
+                                                                                                alt="thumbnail" />
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="mega-menu-media-info">
+                                                                                    <h4 class="mega-menu-heading"><a
+                                                                                            href="portfolio-4.html">Portfolio
+                                                                                            4</a></h4>
+                                                                                    <div class="mega-menu-desc">
+                                                                                        Another Stylish portfolio
+                                                                                        gallary.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-media">
+                                                                                <div class="mega-menu-media-img">
+                                                                                    <div class="mega-menu-thumbnail">
+                                                                                        <a href="portfolio-5.html">
+                                                                                            <img src="assets/img/vmm-thumb/mega-menu-thumbnail-09.jpg"
+                                                                                                alt="thumbnail" />
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="mega-menu-media-info">
+                                                                                    <h4 class="mega-menu-heading"><a
+                                                                                            href="portfolio-5.html">Portfolio
+                                                                                            5</a></h4>
+                                                                                    <div class="mega-menu-desc">
+                                                                                        Display your photo using this
+                                                                                        layout.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-media">
+                                                                                <div class="mega-menu-media-img">
+                                                                                    <div class="mega-menu-thumbnail">
+                                                                                        <a href="portfolio-6.html">
+                                                                                            <img src="assets/img/vmm-thumb/mega-menu-thumbnail-10.jpg"
+                                                                                                alt="thumbnail" />
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="mega-menu-media-info">
+                                                                                    <h4 class="mega-menu-heading"><a
+                                                                                            href="portfolio-6.html">Portfolio
+                                                                                            6</a></h4>
+                                                                                    <div class="mega-menu-desc">
+                                                                                        Gallery for your portfolio
+                                                                                        images.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <!-- Column -->
+                                                                    <div class="col-lg-4">
+
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <a href="portfolio-7.html">
+                                                                                    <img src="assets/img/vmm-thumb/mega-menu-thumbnail-11.jpg"
+                                                                                        alt="thumbnail" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="portfolio-7.html">Portoflio
+                                                                                    7</a></h4>
+                                                                            <div class="mega-menu-desc">
+                                                                                Showcase for your clicked awesome
+                                                                                photos.
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-menu"><a href="#">Pages</a>
+                                                    <ul>
+                                                        <li>
+
+                                                            <!-- Mega menu container -->
+                                                            <div class="mega-menu-container taleft">
+                                                                <div class="row">
+
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+
+                                                                        <div class="mega-menu-box">
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="#">About Pages</a></h4>
+                                                                            <ul class="mega-menu-list">
+                                                                                <li>
+                                                                                    <a href="about-1.html">About 1</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="about-2.html">About 2</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="about-3.html">About 3</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="mega-menu-box">
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="#">Service Pages</a></h4>
+                                                                            <ul class="mega-menu-list">
+                                                                                <li>
+                                                                                    <a href="service-1.html">Service
+                                                                                        1</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="service-2.html">Service
+                                                                                        2</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="service-3.html">Service
+                                                                                        3</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="service-4.html">Service
+                                                                                        4</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="service-5.html">Service
+                                                                                        5</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="service-details.html">Service
+                                                                                        Details</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="mega-menu-box">
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="gallery-3.html">Gallery</a>
+                                                                            </h4>
+                                                                            <ul class="mega-menu-list">
+                                                                                <li>
+                                                                                    <a href="gallery-3.html">Gallery
+                                                                                        3</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="gallery-4.html">Gallery
+                                                                                        4</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="gallery-5.html">Gallery
+                                                                                        5</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="gallery-6.html">Gallery
+                                                                                        6</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+
+                                                                        <div class="mega-menu-box">
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="blog-1.html">Blog Pages</a>
+                                                                            </h4>
+                                                                            <ul class="mega-menu-list">
+                                                                                <li>
+                                                                                    <a href="blog-1.html">Blog 1</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-2.html">Blog 2</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-3.html">Blog 3</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-4.html">Blog 4</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-5.html">Blog 5</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-6.html">Blog 6</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-7.html">Blog 7</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-8.html">Blog 8</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-9.html">Blog 9</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-details-1.html">Blog
+                                                                                        Details 1</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-details-2.html">Blog
+                                                                                        Details 2</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="blog-details-3.html">Blog
+                                                                                        Details 3</a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="mega-menu-box">
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="album-1.html">Album</a></h4>
+                                                                            <ul class="mega-menu-list">
+                                                                                <li>
+                                                                                    <a href="album-1.html">Album 1</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="album-2.html">Album 2</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="album-3.html">Album 3</a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+
+                                                                    </div>
+
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+
+                                                                        <div class="mega-menu-box">
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="#">Portfolio</a></h4>
+                                                                            <ul class="mega-menu-list">
+                                                                                <li>
+                                                                                    <a href="portfolio-1.html">Portfolio
+                                                                                        1</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-2.html">Portolio
+                                                                                        2</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-3.html">Portolio
+                                                                                        3</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-4.html">Portfolio
+                                                                                        4</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-5.html">Portfolio
+                                                                                        5</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-6.html">Portfolio
+                                                                                        6</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-7.html">Portfolio
+                                                                                        7</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-8.html">Portfolio
+                                                                                        8</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-9.html">Portfolio
+                                                                                        9</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-10.html">Portfolio
+                                                                                        10</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-11.html">Portfolio
+                                                                                        11</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-12.html">Portfolio
+                                                                                        12</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-13.html">Portfolio
+                                                                                        13</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="portfolio-14.html">Portfolio
+                                                                                        14</a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="mega-menu-box">
+                                                                            <h4 class="mega-menu-heading"><a
+                                                                                    href="#">Others</a></h4>
+                                                                            <ul class="mega-menu-list">
+                                                                                <li>
+                                                                                    <a href="pricing.html">Pricing</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="404.html">404</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="contact.html">Cooooontact
+                                                                                        Us</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="coming-soon.html">Coming
+                                                                                        Soon</a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <!-- Column -->
+                                                                    <div class="col-md-6 col-lg-3">
+
+                                                                        <div class="mega-menu-box">
+                                                                            <div class="mega-menu-thumbnail">
+                                                                                <img src="assets/img/vmm-thumb/vmmlist-thumbnail.png"
+                                                                                    alt="thumbnail" />
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="submenu-right"><a href="blog-1.html">Blogs</a>
+                                                    <ul>
+                                                        <li><a href="blog-1.html">Blog 1</a></li>
+                                                        <li><a href="blog-2.html">Blog 2</a></li>
+                                                        <li><a href="blog-3.html">Blog 3</a></li>
+                                                        <li class="dropdown_menu"><a href="#">More<span></span></a>
+                                                            <ul>
+                                                                <li><a href="blog-details-1.html">Blog Details
+                                                                        1<span></span></a></li>
+                                                                <li><a href="blog-details-2.html">Blog Details
+                                                                        2<span></span></a></li>
+                                                                <li><a href="404.html">404<span></span></a></li>
+                                                            </ul>
+                                                            <span class="dropdown-plus"></span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="contact.html" data-toggle="modal"
+                                                        data-target=".bd-example-modal-lg">Contact Us</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-none col-xl-2 d-xl-block">
+                            <div class="search-menu-btn">
+                                <div class="searchV1-btn">
+                                    <div class="soc-btn search-open">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                    <div class="soc-btn search-close">
+                                        <i class="fa fa-close"></i>
+                                    </div>
+                                </div>
+                                <span class="menu2nd-btn">
+                                    <i class="fa fa-bars fa-2x"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header Area -->
+    <!-- Search Box -->
+    <div class="search_V1">
+        <form>
+            <input type="text" class="input">
+        </form>
+    </div>
+    <!-- Secondary Menu area -->
+    <div class="secondMenu_V1">
+        <nav class="fotoliaCircular-menu">
+            <div class="circle">
+                <a href="index.html"><i class="flaticon-001-camera"></i></a>
+                <a href="portfolio-1.html"><i class="flaticon-030-album"></i></a>
+                <a href="portfolio-2.html"><i class="flaticon-025-video-camera"></i></a>
+                <a href="gallery-3.html"><i class="flaticon-019-histogram"></i></a>
+                <a href="album-1.html"><i class="flaticon-017-len-2"></i></a>
+                <a href="album-2.html"><i class="flaticon-004-spotlight"></i></a>
+                <a href="portfolio-4.html"><i class="flaticon-022-portrait"></i></a>
+                <a href="portfolio-5.html"><i class="flaticon-037-timer"></i></a>
+            </div>
+            <span class="menu2nd-btn">
+                <i class="fa fa-times fa-2x"></i>
+            </span>
+        </nav>
+    </div>
+    <!-- /Secondary Menu area -->
+    <!-- Hero Area -->
+    <section class="hero-area hero_V1">
+        <div class="container">
+            <div class="hero-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="hero-text">
+                            <h2 class="wow fadeIn" data-wow-delay=".5s"><span>Photography</span> is an Immediate
+                                Reaction,
+                                Drawing is a <span>Meditation</span> Props.</h2>
+                            <p class="wow fadeIn" data-wow-delay=".99s">Photography is a way of feeling, of touching, of
+                                loving. What you have caught on film is captured forever... it
+                                remembers little things, long after you have forgotten everything.</p>
+                            <div class="hero-btn wow fadeIn" data-wow-delay="1.49s">
+                                <a href="contact.html" class="btn-style-1 btns1b">Contact Us</a>
+                                <a href="portfolio-1.html" class="btn-style-1">Portfolio</a>
+                            </div>
+                        </div>
+                        <div class="hb-scroll-btn">
+                            <a href="#about" class="smoothscroll"><i class="fa fa-angle-double-down"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Hero Area -->
+    <!-- About Area -->
+    <section id="about" class="about-area about-1 section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-img wow fadeInLeft" data-wow-delay=".25s">
+                        <img src="assets/img/section-img/about-1-1.jpg" alt="">
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text">
+                        <div class="section-text">
+                            <div class="section-titleV1">
+                                <p class="wow fadeInUp" data-wow-delay=".15s">About us</p>
+                                <h3 class="wow fadeInUp" data-wow-delay=".25s">Photography Is Great</h3>
+                            </div>
+                            <p class="wow fadeInUp" data-wow-delay=".35s">Photography is like a moment, an instant. You
+                                need a half-second to get the
+                                photo. So it's good to capture people when they are themselves.I became
+                                passionate about design filmmaking when I graduated from UCLA, and one
+                                of the things I always wanted to do was shoot really high quality film, so I got
+                                into time-lapse photography - so that means when you shoot a flower.</p>
+                            <ul>
+                                <li class="wow fadeInUp" data-wow-delay=".45s">You're shooting, like, one frame every
+                                    twenty minutes, so that's</li>
+                                <li class="wow fadeInUp" data-wow-delay=".55s">Seconds of a film per day. Photography is
+                                    a pursuit that allows</li>
+                                <li class="wow fadeInUp" data-wow-delay=".65s">Hands-on with what you show people of
+                                    either yourself or the</li>
+                            </ul>
+                            <p class="wow fadeInUp" data-wow-delay=".75">You do have a modicum of creative freedom as an
+                                actor, but you're still very
+                                much a cipher for other people's art. Photography gives you the opportunity
+                                to use your sensibility and everything you are to say something.</p>
+                            <a href="contact.html" class="btn-style-1 wow fadeInUp" data-wow-delay=".99s">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /About Area -->
+    <!-- Our Portfolio -->
+    <section id="portfolio" class="portfolio-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-titleV1">
+                        <p class="wow fadeInUp" data-wow-delay=".15s">Our Recent Works</p>
+                        <h3 class="wow fadeInUp" data-wow-delay=".25s">Our Portfolio</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-wrapper">
+                <div class="row">
+                    <div class="col">
+                        <div class="btn-group btn-group-toggle shuffle-filter-btn wow fadeInUp" data-toggle="buttons"
+                            data-wow-delay=".15s">
+                            <label class="btn active">
+                                <input type="radio" name="shuffle-filter" value="all" checked="checked" />All
+                            </label>
+                            <label class="btn">
+                                <input type="radio" name="shuffle-filter" value="family" />Family
+                            </label>
+                            <label class="btn">
+                                <input type="radio" name="shuffle-filter" value="prepostwedding" />Pre/Post wedding
+                            </label>
+                            <label class="btn">
+                                <input type="radio" name="shuffle-filter" value="wedding" />Wedding
+                            </label>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row shuffle-box sbox_V1">
+                    <figure class="single-shuffle col-4" data-groups='["family"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image1.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image1.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["family"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image5.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image5.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["family"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image7.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image7.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        </figure>
+                    <figure class="single-shuffle col-4" data-groups='["family"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image8.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image8.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["family"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image9.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image9.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["family"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image10.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image10.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image2.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image2.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image6.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image6.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image14.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image14.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image15.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image15.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+
+                    <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image16.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image16.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image17.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image17.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+
+                    <figure class="single-shuffle col-4" data-groups='["wedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image3.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image3.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["wedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image4.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image4.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+
+
+                    <figure class="single-shuffle col-4" data-groups='["wedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image27.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image27.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["wedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image29.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image29.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["wedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image30.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image30.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="single-shuffle col-4" data-groups='["wedding"]'>
+                        <div class="aspect">
+                            <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
+                                <img src="assets/img/portfolio/portfolio-image31.jpg" alt="" />
+                                <div class="ssf-hover">
+                                    <a data-fancybox="group-4" class="fancyGallery"
+                                        href="assets/img/portfolio/portfolio-image31.jpg">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    
+                    
+
+                    <div class="col-1 my-sizer-element"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- /Our Portfolio -->
+    <!-- Service Area -->
+    <section class="service-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-titleV1">
+                        <p class="wow fadeInUp" data-wow-delay=".15s">OUR Exclusive Services</p>
+                        <h3 class="wow fadeInUp" data-wow-delay=".25s">Check Our Services</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-service sspV1 wow fadeInUp" data-wow-delay=".15s">
+                        <div class="ss-icon">
+                            <i class="flaticon-001-camera"></i>
+                        </div>
+                        <div class="ss-text">
+                            <h4>Regular Photography</h4>
+                            <p>Photography is way of feeling of touching
+                                of loving. What you have caught on film
+                                captured forever rememb little things.</p>
+                            <a href="service-details.html">Read More</a>
+                        </div>
+                        <div class="ssfb-img">
+                            <img src="assets/img/service/service1-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-service sspV1 wow fadeInUp" data-wow-delay=".25s">
+                        <div class="ss-icon">
+                            <i class="flaticon-022-portrait"></i>
+                        </div>
+                        <div class="ss-text">
+                            <h4>portrait Photography</h4>
+                            <p>Photography is way of feeling of touching
+                                of loving. What you have caught on film
+                                captured forever rememb little things.</p>
+                            <a href="service-details.html">Read More</a>
+                        </div>
+                        <div class="ssfb-img">
+                            <img src="assets/img/service/service1-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-service sspV1 wow fadeInUp" data-wow-delay=".75s">
+                        <div class="ss-icon">
+                            <i class="flaticon-018-curve"></i>
+                        </div>
+                        <div class="ss-text">
+                            <h4>producing ideas</h4>
+                            <p>Photography is way of feeling of touching
+                                of loving. What you have caught on film
+                                captured forever rememb little things.</p>
+                            <a href="service-details.html">Read More</a>
+                        </div>
+                        <div class="ssfb-img">
+                            <img src="assets/img/service/service1-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-service sspV1 wow fadeInUp" data-wow-delay=".15s">
+                        <div class="ss-icon">
+                            <i class="flaticon-001-camera"></i>
+                        </div>
+                        <div class="ss-text">
+                            <h4>portrait photography</h4>
+                            <p>Photography is way of feeling of touching
+                                of loving. What you have caught on film
+                                captured forever rememb little things.</p>
+                            <a href="service-details.html">Read More</a>
+                        </div>
+                        <div class="ssfb-img">
+                            <img src="assets/img/service/service1-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-service sspV1 wow fadeInUp" data-wow-delay=".25s">
+                        <div class="ss-icon">
+                            <i class="flaticon-022-portrait"></i>
+                        </div>
+                        <div class="ss-text">
+                            <h4>model Photography</h4>
+                            <p>Photography is way of feeling of touching
+                                of loving. What you have caught on film
+                                captured forever rememb little things.</p>
+                            <a href="service-details.html">Read More</a>
+                        </div>
+                        <div class="ssfb-img">
+                            <img src="assets/img/service/service1-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-service sspV1 wow fadeInUp" data-wow-delay=".75s">
+                        <div class="ss-icon">
+                            <i class="flaticon-018-curve"></i>
+                        </div>
+                        <div class="ss-text">
+                            <h4>landscape photography</h4>
+                            <p>Photography is way of feeling of touching
+                                of loving. What you have caught on film
+                                captured forever rememb little things.</p>
+                            <a href="service-details.html">Read More</a>
+                        </div>
+                        <div class="ssfb-img">
+                            <img src="assets/img/service/service1-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Service Area -->
+    <!-- Testimonial Area -->
+    <section class="testimonial-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-titleV1">
+                        <p class="wow fadeInUp" data-wow-delay=".15s">Testimonials</p>
+                        <h3 class="wow fadeInUp" data-wow-delay=".25s">clients feedbacks</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testimonial-wrapper">
+
+                        <div id="sync1" class="testimonial-carouselV1 owl-carousel owl-theme wow fadeInUp"
+                            data-wow-delay=".75s">
+                            <div class="item">
+                                <div class="chrisSingle-testimonial">
+                                    <div class="tc-text">
+                                        <p>Photography is a way of feeling, of touching, of loving. What you have caught
+                                            on film is captured forever...
+                                            it remembers little things after have forgotten everything. Photography
+                                            powerful mediu expression
+                                            and communications, offers an infinite variety of perception,
+                                            interpretation.</p>
+                                    </div>
+                                    <div class="tc-name">
+                                        <h4>Syetrot Ruberti</h4>
+                                        <p>CEO of Newrei</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="chrisSingle-testimonial">
+                                    <div class="tc-text">
+                                        <p>Photography is a way of feeling, of touching, of loving. What you have caught
+                                            on film is captured
+                                            forever...
+                                            it remembers little things after have forgotten everything. Photography
+                                            powerful mediu expression
+                                            and communications, offers an infinite variety of perception,
+                                            interpretation.</p>
+                                    </div>
+                                    <div class="tc-name">
+                                        <h4>Syetrot Ruberti</h4>
+                                        <p>CEO of Newrei</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="chrisSingle-testimonial">
+                                    <div class="tc-text">
+                                        <p>Photography is a way of feeling, of touching, of loving. What you have caught
+                                            on film is captured
+                                            forever...
+                                            it remembers little things after have forgotten everything. Photography
+                                            powerful mediu expression
+                                            and communications, offers an infinite variety of perception,
+                                            interpretation.</p>
+                                    </div>
+                                    <div class="tc-name">
+                                        <h4>Syetrot Ruberti</h4>
+                                        <p>CEO of Newrei</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sync2" class="tc-avatar-carousel owl-carousel owl-theme wow fadeInUp"
+                            data-wow-delay=".95s">
+                            <div class="item">
+                                <div id="chti-1" class="tc-avatar">
+                                    <img src="assets/img/avatar/t-avatar-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div id="chti-3" class="tc-avatar">
+                                    <img src="assets/img/avatar/t-avatar-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div id="chti-2" class="tc-avatar">
+                                    <img src="assets/img/avatar/t-avatar-3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /Testimonial Area -->
+    <!-- Blog Area -->
+    <section class="blog-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-titleV1">
+                        <p class="wow fadeInUp" data-wow-delay=".15s">OUR blogs</p>
+                        <h3 class="wow fadeInUp" data-wow-delay=".25s">get new updates</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-blog sb-V1 wow fadeInUp" data-wow-delay=".15s">
+                        <div class="sb-img">
+                            <a href="blog-details-2.html"><img src="assets/img/blog/blog-1.jpg" alt=""></a>
+
+                        </div>
+                        <div class="sb-meta">
+                            <ul>
+                                <li><a href="#" class="cat">Analysis</a></li>
+                                <li><span class="date">18.12.2018</span></li>
+                            </ul>
+                        </div>
+                        <div class="sb-text">
+                            <h4><a href="blog-details-2.html">Design is about poin view and
+                                    there should be some sort.</a></h4>
+                            <p>Photography is like a moment, an instant. You
+                                need a half-second to get the photo.</p>
+                            <a href="blog-details-2.html" class="read-more-btn-1">Read More<i
+                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-blog sb-V1 wow fadeInUp" data-wow-delay=".25s">
+                        <div class="sb-img">
+                            <a href="blog-details-2.html"><img src="assets/img/blog/blog-2.jpg" alt=""></a>
+
+                        </div>
+                        <div class="sb-meta">
+                            <ul>
+                                <li><a href="#" class="cat">Analysis</a></li>
+                                <li><span class="date">18.12.2018</span></li>
+                            </ul>
+                        </div>
+                        <div class="sb-text">
+                            <h4><a href="blog-details-2.html">Photography is very important
+                                    part of my life.</a></h4>
+                            <p>Photography is like a moment, an instant. You
+                                need a half-second to get the photo.</p>
+                            <a href="blog-details-2.html" class="read-more-btn-1">Read More<i
+                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-blog sb-V1 wow fadeInUp" data-wow-delay=".35s">
+                        <div class="sb-img">
+                            <a href="blog-details-2.html"><img src="assets/img/blog/blog-3.jpg" alt=""></a>
+
+                        </div>
+                        <div class="sb-meta">
+                            <ul>
+                                <li><a href="#" class="cat">Analysis</a></li>
+                                <li><span class="date">18.12.2018</span></li>
+                            </ul>
+                        </div>
+                        <div class="sb-text">
+                            <h4><a href="blog-details-2.html">Landscape photography is the
+                                    supreme test photograp.</a></h4>
+                            <p>Photography is like a moment, an instant. You
+                                need a half-second to get the photo.</p>
+                            <a href="blog-details-2.html" class="read-more-btn-1">Read More<i
+                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Blog Area -->
+
+
+    <!--Contact Area-->
+    <div class="modal fade bd-example-modal-lg" id="exampleModalLong-1" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div id="contactus">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label>
+
+                                            <input type="radio" id="rad1" name="user" value="customer"
+                                                onchange="displayRadioValue()" />
+                                            <span>Customer</span>
+
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>
+
+                                            <input type="radio" id="rad2" name="user" value="freelancer"
+                                                onchange="displayRadioValue()" />
+                                            <span>Freelancer</span>
+
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div id="customer" style="display: none;">
+                            <form action="https://sheetdb.io/api/v1/5e5shkkx7j4sx" method="POST" id="customerForm" onsubmit="return validate()" >
+                                <table>
+                                    <tr>
+                                        <td><label> Name: </label></td>
+                                        <td>
+                                            <input type="text" name="name" id="name" placeholder="Name">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label>ContactNumber: </label></td>
+                                        <td>
+                                            <input type="number" name="contact">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>WhatsAppNumber: </label></td>
+                                        <td>
+                                            <input type="number" name="whatsapp">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Email Id: </label></td>
+                                        <td style="text-align: center"><input type="text" name="email"
+                                                placeholder="example@gmail.com"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label> Location: </label></td>
+                                        <td>
+                                            Select Country: <select name="state" id="customerCountrySel" size="1">
+                                                <option value="" selected="selected">Select Country</option>
+                                            </select>
+
+                                            Select State: <select name="countrya" id="customerStateSel" size="1">
+                                                <option value="" selected="selected">Please select Country first
+                                                </option>
+                                            </select>
+
+                                            Select District: <select name="district" id="customerDistrictSel" size="1">
+                                                <option value="" selected="selected">Please select State first</option>
+                                            </select><br>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="meeting-time">Date and Time for the Event:</label>
+                                        </td>
+                                        <td>
+                                            <input type="datetime-local" id="meeting-time" name="meeting-time"
+                                                value="2021-06-12T19:30" min="2000-01-01T00:00" max="2050-06-14T00:00">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Event Category: </label></td>
+                                        <td>
+                                            <div id="list1" class="dropdown-check-list" tabindex="100">
+
+                                                <div class="checkboxes">
+                                                    <label><input type="checkbox" />&nbsp;<span> Wedding </span><input
+                                                            type="checkbox" />&nbsp;<span>House
+                                                            Warming/Architecture</span></label>
+                                                    <label><input type="checkbox" />&nbsp;<span>Engagement</span><input
+                                                            type="checkbox" />&nbsp;<span>Baby/Maternity shoot
+                                                        </span></label>
+
+
+                                                    <label> <input type="checkbox" />&nbsp;<span>Event shoot
+                                                        </span><input type="checkbox" />&nbsp;<span>Industrial
+                                                            shoot</span></label>
+
+                                                    <label><input type="checkbox" />&nbsp;<span>Portfolio
+                                                            shoot</span>
+                                                        <input type="checkbox" /> &nbsp;<span>Product
+                                                            shoot</span></label>
+
+
+
+                                                    <label>
+                                                        <input type="checkbox" />&nbsp;<span> Family shoot</span><input
+                                                            type="checkbox" />&nbsp; <span>Automobile shoot
+                                                        </span></label>
+
+
+
+                                                </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label> Detailed Description box: </label></td>
+                                        <td>
+                                            <textarea id="" placeholder="Add Your Comment" value=" "></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Expecting Budget Details: </label></td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+
+                                        <td class="text-right align-middle">
+                                            <div class="btn-group">
+
+                                                <input type="submit"
+                                                    class="btn btn-secondary btn-lg btn-style-1 modal-btn" name="submit"
+                                                    onclick="return validate()" value="Submit" /> &nbsp;&nbsp;
+
+                                            </div>
+                                        </td>
+
+                                        <td class="text-left align-middle">
+                                            <div class="btn-group">
+
+                                                <input type="reset"
+                                                    class="btn btn-secondary btn-lg btn-style-1 btns1b  modal-btn"
+                                                    onclick="validate()" value="Reset" />
+
+
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+
+
+
+
+                                </table>
+                            </form>
+                        </div>
+
+
+                        <div id="freelancer" style="display: none;">
+                            <form method="POST" action="https://sheetdb.io/api/v1/3mcbco6lea0qi" id="freelancerForm">
+                                <table>
+                                    <tr>
+                                        <td><label> Name: </label></td>
+                                        <td>
+                                            <input type="text" name="name" placeholder="Name">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label>ContactNumber: </label></td>
+                                        <td>
+                                            <input type="number" name="contact">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>WhatsAppNumber: </label></td>
+                                        <td>
+                                            <input type="number" name="whatsapp">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Email Id: </label></td>
+                                        <td>
+                                            <input type="text" name="email" placeholder="example@gmail.com">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label> Location: </label></td>
+                                        <td>
+
+
+
+                                            <select name="district" id="district">
+                                                <option value="Select District" selected="selected">Select District
+                                                </option>
+
+                                                <option value="Alappuzha">Alappuzha</option>
+                                                <option value="Ernakulam">Ernakulam</option>
+                                                <option value="Idukki">Idukki</option>
+                                                <option value="Kannur">Kannur</option>
+                                                <option value="Kasaragod">Kasaragod</option>
+                                                <option value="Kollam">Kollam</option>
+                                                <option value="Kottayam">Kottayam</option>
+                                                <option value="Kozhikode">Kozhikode</option>
+                                                <option value="Malappuram">Malappuram</option>
+                                                <option value="Palakkad">Palakkad</option>
+                                                <option value="Pathanamthitta">Pathanamthitta</option>
+                                                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                                                <option value="Thrissur">Thrissur</option>
+                                                <option value="Wayanad">Wayanad</option>
+                                            </select>
+
+                                        </td>
+
+                                    <tr>
+                                        <td><label>Shoot Category: </label></td>
+                                        <td>
+                                            <div id="list1" class="dropdown-check-list" tabindex="100">
+
+                                                <div class="checkboxes">
+                                                    <label></label><input type="checkbox" /><span>&nbsp;</span>Safe
+                                                    /Traditional Photographer </label>
+                                                    <label> <input type="checkbox" />&nbsp;<span>Candid Photographer
+                                                        </span>
+                                                    </label>
+                                                    <label> <input type="checkbox" />&nbsp;<span>Safe /Traditional
+                                                            Videographer </span> </label>
+                                                    <label> <input type="checkbox" />&nbsp;<span>Candid Videographer
+                                                        </span>
+                                                    </label>
+
+
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label> Camera,Lens and other Equipment Details: </label></td>
+                                        <td>
+                                            <textarea id="description" name="description" placeholder="Add text"
+                                                value=" "></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            <div class="pay">
+                                                <label>Remuneration: </label>
+
+                                            </div>
+                                        </td>
+
+
+                                    <tr>
+                                        <td><label>Wedding + Reception:</label></td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Wedding only:</label></td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Reception/Haldi:</label></td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label> Pre Wedding /post Wedding:</label></td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                   
+
+
+
+
+                                    </td>
+                                    </tr>
+                                    
+
+
+                                    <tr>
+
+                                        <td class="text-right align-middle">
+                                            <div class="btn-group">
+
+                                                <input type="submit"
+                                                    class="btn btn-secondary btn-lg btn-style-1 modal-btn" name="submit"
+                                                    onclick="validate()" value="Submit" /> &nbsp;&nbsp;
+
+                                            </div>
+                                        </td>
+
+                                        <td class="text-left align-middle">
+                                            <div class="btn-group">
+
+                                                <input type="reset"
+                                                    class="btn btn-secondary btn-lg btn-style-1 btns1b  modal-btn"
+                                                    onclick="validate()" value="Reset" />
+
+
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--/Contact Area-->
+
+
+    <!-- Footer Area -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="footer-copyr-logo">
+                    <img src="assets/img/logo-1.png" alt="">
+                    <p>© 2019 All rights reserved by VoidCodersTM</p>
+                </div>
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="https://twitter.com/voidcoders"><i class="fa fa-twitter"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.behance.net/voidcoders"><i class="fa fa-behance"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/voidcoders/"><i class="fa fa-facebook"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.pinterest.com/voidthemes/"><i class="fa fa-pinterest-p"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/voidcoders/about/"><i class="fa fa-linkedin"
+                                    aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer Area -->
+
+
+    <!-- Scripts -->
+    <!-- jQuery Plugin -->
+    <script src="assets/js/jquery-3.2.0.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <!-- Owl Carousel Plugin -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Main Counterup Plugin-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/jquery.scrollUp.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/shuffle.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- Slick Nav  -->
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <!-- Void Mega Menu -->
+    <script src="assets/js/vmm.menu.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- WOW JS Plugin-->
+    <script src="assets/js/wow.js"></script>
+    <!-- Main Script -->
+    <script src="assets/js/theme.js"></script>
+
+
+</body>
+
+</html>
