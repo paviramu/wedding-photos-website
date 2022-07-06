@@ -2006,7 +2006,7 @@
 
                                             <li>
                                                 <a href="contact.html" data-toggle="modal"
-                                                    data-target=".bd-example-modal-lg">Contact Us</a>
+                                                    data-target=".bd-example-modal-lg-1">Contact Us</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -2081,7 +2081,11 @@
 
                                                 <a href="contact.html" class="btn-style-1 wow fadeIn"
                                                     data-wow-delay=".75s" data-toggle="modal"
-                                                    data-target=".bd-example-modal-lg">Contact Us</a>
+                                                    data-target=".bd-example-modal-lg-1">Customer</a>
+
+                                                    <a href="contact.html" class="btn-style-1 wow fadeIn"
+                                                    data-wow-delay=".75s" data-toggle="modal"
+                                                    data-target=".bd-example-modal-lg-2">Freelancer</a>
                                             </div>
                                         </div>
                                     </div>
@@ -2877,46 +2881,23 @@
     <!-- /Instagram Area -->
 
 
-    <!--Contact Area-->
-    <div class="modal fade bd-example-modal-lg" id="exampleModalLong-1" tabindex="-1" role="dialog"
+    <!--Customer Area-->
+    <div class="modal fade bd-example-modal-lg-1" id="exampleModalLong-1" tabindex="-1" role="dialog"
         aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Contact Us</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Customer</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <div id="contactus">
-                            <form>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <label>
-
-                                            <input type="radio" id="rad1" name="user" value="customer"
-                                                onchange="displayRadioValue()" />
-                                            <span>Customer</span>
-
-                                        </label>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <label>
-
-                                            <input type="radio" id="rad2" name="user" value="freelancer"
-                                                onchange="displayRadioValue()" />
-                                            <span>Freelancer</span>
-
-                                        </label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        
 
 
-                        <div id="customer" style="display: none;">
+                        <div id="customer">
                             <form action="https://sheetdb.io/api/v1/5e5shkkx7j4sx" method="POST" id="customerForm"
                                 onsubmit="return validate()">
                                 <table>
@@ -3056,7 +3037,36 @@
                         </div>
 
 
-                        <div id="freelancer" style="display: none;">
+                        
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!--/Customer Area-->
+
+<!--Freelancer Area-->
+    <div class="modal fade bd-example-modal-lg-2" id="exampleModalLong-2" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Freelancer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+
+
+                      
+
+
+                        <div id="freelancer">
                             <form method="POST" action="https://sheetdb.io/api/v1/3mcbco6lea0qi" id="freelancerForm">
                                 <table>
                                     <tr>
@@ -3219,7 +3229,8 @@
             </div>
         </div>
     </div>
-    <!--/Contact Area-->
+
+    <!--/Freelancer Area-->
 
 
     <!-- Footer Area -->
