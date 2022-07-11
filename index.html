@@ -24,6 +24,7 @@
 
     <!-- CSS -->
     <!-- Bootstrap CSS -->
+
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Jquery ui CSS -->
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
@@ -57,6 +58,8 @@
         <![endif]-->
 
     <script>
+
+       
 
         function displayRadioValue() {
             var ele = document.getElementsByName('user');
@@ -1118,8 +1121,9 @@
             height: 16px;
             width: 16px;
             margin-left: 8px;
+            
         }
-
+       
         textarea {
             height: 48px;
         }
@@ -1153,7 +1157,7 @@
             font-size: x-large;
         }
 
-        table {
+        #exampleModalLong-1 {
             font-size: medium;
 
             color: black;
@@ -1164,6 +1168,10 @@
             vertical-align: middle;
 
         }
+
+         .checkbox-modal{
+            font-size: 12px;
+         }
 
         .checkboxes label span {
 
@@ -1194,9 +1202,19 @@
             text-align: center;
         }
 
+        #customer .btn-group,
+        #freelancer .btn-group {
+            padding-top: 5px;
+        }
+
         .modal-header .modal-title {
             text-align: center;
             width: 100%;
+        }
+
+        #customer,
+        #freelancer {
+            padding: 0px 20px 20px 20px;
         }
     </style>
 </head>
@@ -1323,13 +1341,11 @@
 
                                             <div class="hero-btn">
 
-                                                <a href="contact.html" class="btn-style-1 wow fadeIn"
-                                                    data-wow-delay=".75s" data-toggle="modal"
-                                                    data-target=".bd-example-modal-lg-1">Customer</a>
+                                                <a href="#" class="btn-style-1 wow fadeIn" data-wow-delay=".75s"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg-1">Customer</a>
 
-                                                <a href="contact.html" class="btn-style-1 wow fadeIn"
-                                                    data-wow-delay=".75s" data-toggle="modal"
-                                                    data-target=".bd-example-modal-lg-2">Freelancer</a>
+                                                <a href="#" class="btn-style-1 wow fadeIn" data-wow-delay=".75s"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg-2">Freelancer</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1513,10 +1529,9 @@
                     <figure class="single-shuffle col-4" data-groups='["family"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image1.jpg" alt="" />
+                                <img src="assets/img/portfolio/01.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image1.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/01.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1526,10 +1541,9 @@
                     <figure class="single-shuffle col-4" data-groups='["family"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image5.jpg" alt="" />
+                                <img src="assets/img/portfolio/02.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image5.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/02.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1539,10 +1553,9 @@
                     <figure class="single-shuffle col-4" data-groups='["family"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image7.jpg" alt="" />
+                                <img src="assets/img/portfolio/03.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image7.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/03.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1552,10 +1565,9 @@
                     <figure class="single-shuffle col-4" data-groups='["family"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image8.jpg" alt="" />
+                                <img src="assets/img/portfolio/04.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image8.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/04.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1565,10 +1577,9 @@
                     <figure class="single-shuffle col-4" data-groups='["family"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image9.jpg" alt="" />
+                                <img src="assets/img/portfolio/05.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image9.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/05.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1578,10 +1589,9 @@
                     <figure class="single-shuffle col-4" data-groups='["family"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image10.jpg" alt="" />
+                                <img src="assets/img/portfolio/06.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image10.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/06.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1591,10 +1601,9 @@
                     <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image2.jpg" alt="" />
+                                <img src="assets/img/portfolio/07.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image2.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/07.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1604,10 +1613,9 @@
                     <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image6.jpg" alt="" />
+                                <img src="assets/img/portfolio/08.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image6.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/08.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1617,10 +1625,9 @@
                     <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image14.jpg" alt="" />
+                                <img src="assets/img/portfolio/09.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image14.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/09.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1630,10 +1637,9 @@
                     <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image15.jpg" alt="" />
+                                <img src="assets/img/portfolio/010.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image15.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/010.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1644,10 +1650,9 @@
                     <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image16.jpg" alt="" />
+                                <img src="assets/img/portfolio/011.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image16.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/011.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1657,10 +1662,9 @@
                     <figure class="single-shuffle col-4" data-groups='["prepostwedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image17.jpg" alt="" />
+                                <img src="assets/img/portfolio/012.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image17.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/012.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1671,10 +1675,9 @@
                     <figure class="single-shuffle col-4" data-groups='["wedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image3.jpg" alt="" />
+                                <img src="assets/img/portfolio/013.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image3.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/013.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1684,10 +1687,9 @@
                     <figure class="single-shuffle col-4" data-groups='["wedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image4.jpg" alt="" />
+                                <img src="assets/img/portfolio/014.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image4.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/014.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1699,10 +1701,9 @@
                     <figure class="single-shuffle col-4" data-groups='["wedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image27.jpg" alt="" />
+                                <img src="assets/img/portfolio/015.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image27.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/015.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1712,10 +1713,9 @@
                     <figure class="single-shuffle col-4" data-groups='["wedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image29.jpg" alt="" />
+                                <img src="assets/img/portfolio/016.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image29.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/016.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1725,10 +1725,9 @@
                     <figure class="single-shuffle col-4" data-groups='["wedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image30.jpg" alt="" />
+                                <img src="assets/img/portfolio/017.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image30.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/017.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1738,10 +1737,9 @@
                     <figure class="single-shuffle col-4" data-groups='["wedding"]'>
                         <div class="aspect">
                             <div class="aspect__inner ssf-content wow zoomIn" data-wow-delay=".15s">
-                                <img src="assets/img/portfolio/portfolio-image31.jpg" alt="" />
+                                <img src="assets/img/portfolio/018.jpg" alt="" />
                                 <div class="ssf-hover">
-                                    <a data-fancybox="group-4" class="fancyGallery"
-                                        href="assets/img/portfolio/portfolio-image31.jpg">
+                                    <a data-fancybox="group-4" class="fancyGallery" href="assets/img/portfolio/021.jpg">
                                         <i class="fa fa-search-plus" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -2137,41 +2135,41 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xl-12">
+                            <div id="customer">
+
+                                <form action="https://sheetdb.io/api/v1/5e5shkkx7j4sx" method="POST" id="customerForm"
+                                    onsubmit="return validate()">
 
 
-
-                        <div id="customer">
-                            <form action="https://sheetdb.io/api/v1/5e5shkkx7j4sx" method="POST" id="customerForm"
-                                onsubmit="return validate()">
-                                <table>
-                                    <tr>
-                                        <td><label> Name: </label></td>
-                                        <td>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label> Name: </label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6">
                                             <input type="text" name="name" id="name" placeholder="Name">
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </div>
 
-                                    <tr>
-                                        <td><label>ContactNumber: </label></td>
-                                        <td>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label>ContactNumber: </label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6">
                                             <input type="number" name="contact">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>WhatsAppNumber: </label></td>
-                                        <td>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label>WhatsAppNumber: </label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6">
                                             <input type="number" name="whatsapp">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Email Id: </label></td>
-                                        <td style="text-align: center"><input type="text" name="email"
-                                                placeholder="example@gmail.com"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label> Location: </label></td>
-                                        <td>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label>Email Id: </label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><input type="text" name="email"
+                                                placeholder="example@gmail.com"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label> Location: </label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6">
                                             Select Country: <select name="state" id="customerCountrySel" size="1">
                                                 <option value="" selected="selected">Select Country</option>
                                             </select>
@@ -2182,28 +2180,31 @@
                                             </select>
 
                                             Select District: <select name="district" id="customerDistrictSel" size="1">
-                                                <option value="" selected="selected">Please select State first</option>
+                                                <option value="" selected="selected">Please select State first
+                                                </option>
                                             </select><br>
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label for="meeting-time">Date and Time for the Event:</label>
-                                        </td>
-                                        <td>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label for="meeting-time">Date and Time
+                                                for the Event:</label>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6">
                                             <input type="datetime-local" id="meeting-time" name="meeting-time"
                                                 value="2021-06-12T19:30" min="2000-01-01T00:00" max="2050-06-14T00:00">
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Event Category: </label></td>
-                                        <td>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label>Event Category: </label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6">
                                             <div id="list1" class="dropdown-check-list" tabindex="100">
 
-                                                <div class="checkboxes">
-                                                    <label><input type="checkbox" />&nbsp;<span> Wedding </span><input
-                                                            type="checkbox" />&nbsp;<span>House
+                                                <div class="checkboxes checkbox-modal">
+                                                    
+                                                    <label><input type="checkbox" />&nbsp;<span> Wedding
+                                                        </span><input type="checkbox" />&nbsp;<span>House
                                                             Warming/Architecture</span></label>
                                                     <label><input type="checkbox" />&nbsp;<span>Engagement</span><input
                                                             type="checkbox" />&nbsp;<span>Baby/Maternity shoot
@@ -2222,74 +2223,79 @@
 
 
                                                     <label>
-                                                        <input type="checkbox" />&nbsp;<span> Family shoot</span><input
-                                                            type="checkbox" />&nbsp; <span>Automobile shoot
+                                                        <input type="checkbox" />&nbsp;<span> Family
+                                                            shoot</span><input type="checkbox" />&nbsp;
+                                                        <span>Automobile shoot
                                                         </span></label>
 
 
 
                                                 </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label> Detailed Description box: </label></td>
-                                        <td>
-                                            <textarea id="" placeholder="Add Your Comment" value=" "></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Expecting Budget Details: </label></td>
-                                        <td>
-                                            <input type="number">
-                                        </td>
-                                    </tr>
-
-
-
-
-                                    <tr>
-
-                                        <td class="text-right align-middle">
-                                            <div class="btn-group">
-
-                                                <input type="submit"
-                                                    class="btn btn-secondary btn-lg btn-style-1 modal-btn" name="submit"
-                                                    onclick="return validate()" value="Submit" /> &nbsp;&nbsp;
-
                                             </div>
-                                        </td>
-
-                                        <td class="text-left align-middle">
-                                            <div class="btn-group">
-
-                                                <input type="reset"
-                                                    class="btn btn-secondary btn-lg btn-style-1 btns1b  modal-btn"
-                                                    onclick="validate()" value="Reset" />
-
-
+                                        </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xl-6"><label> Detailed Description box:
+                                                </label></div>
+                                            <div class="col-md-6 col-sm-6 col-xl-6">
+                                                <textarea id="" placeholder="Add Your Comment" value=" "></textarea>
                                             </div>
-                                        </td>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xl-6"><label>Expecting Budget Details:
+                                                </label></div>
+                                            <div class="col-md-6 col-sm-6 col-xl-6">
+                                                <input type="number">
+                                            </div>
+                                        </div>
 
-                                    </tr>
+
+
+
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xl-6  align-middle">
+                                                <div class="btn-group">
+
+                                                    <input type="submit"
+                                                        class="btn btn-secondary btn-lg btn-style-1 modal-btn"
+                                                        name="submit" onclick="return validate()" value="Submit" />
+                                                    &nbsp;&nbsp;
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-6 col-xl-6  align-middle">
+                                                <div class="btn-group">
+
+                                                    <input type="reset"
+                                                        class="btn btn-secondary btn-lg btn-style-1 btns1b  modal-btn"
+                                                        onclick="validate()" value="Reset" />
+
+
+                                                </div>
+                                            </div>
+                                        </div>
 
 
 
 
 
-                                </table>
-                            </form>
+
+                                </form>
+
+                            </div>
+
+
                         </div>
-
-
-
-
-
                     </div>
                 </div>
 
+
             </div>
         </div>
+
     </div>
+
     <!--/Customer Area-->
 
     <!--Freelancer Area-->
@@ -2304,169 +2310,181 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xl-12">
+                            <div id="freelancer">
 
 
 
 
 
-                        <div id="freelancer">
-                            <form method="POST" action="https://sheetdb.io/api/v1/3mcbco6lea0qi" id="freelancerForm">
-                                <table>
-                                    <tr>
-                                        <td><label> Name: </label></td>
-                                        <td>
-                                            <input type="text" name="name" placeholder="Name">
-                                        </td>
-                                    </tr>
+                                <form method="POST" action="https://sheetdb.io/api/v1/3mcbco6lea0qi"
+                                    id="freelancerForm">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tr>
+                                                <td><label> Name: </label></td>
+                                                <td>
+                                                    <input type="text" name="name" placeholder="Name">
+                                                </td>
+                                            </tr>
 
-                                    <tr>
-                                        <td><label>ContactNumber: </label></td>
-                                        <td>
-                                            <input type="number" name="contact">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>WhatsAppNumber: </label></td>
-                                        <td>
-                                            <input type="number" name="whatsapp">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Email Id: </label></td>
-                                        <td>
-                                            <input type="text" name="email" placeholder="example@gmail.com">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label> Location: </label></td>
-                                        <td>
-
-
-
-                                            <select name="district" id="district">
-                                                <option value="Select District" selected="selected">Select District
-                                                </option>
-
-                                                <option value="Alappuzha">Alappuzha</option>
-                                                <option value="Ernakulam">Ernakulam</option>
-                                                <option value="Idukki">Idukki</option>
-                                                <option value="Kannur">Kannur</option>
-                                                <option value="Kasaragod">Kasaragod</option>
-                                                <option value="Kollam">Kollam</option>
-                                                <option value="Kottayam">Kottayam</option>
-                                                <option value="Kozhikode">Kozhikode</option>
-                                                <option value="Malappuram">Malappuram</option>
-                                                <option value="Palakkad">Palakkad</option>
-                                                <option value="Pathanamthitta">Pathanamthitta</option>
-                                                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-                                                <option value="Thrissur">Thrissur</option>
-                                                <option value="Wayanad">Wayanad</option>
-                                            </select>
-
-                                        </td>
-
-                                    <tr>
-                                        <td><label>Shoot Category: </label></td>
-                                        <td>
-                                            <div id="list1" class="dropdown-check-list" tabindex="100">
-
-                                                <div class="checkboxes">
-                                                    <label></label><input type="checkbox" /><span>&nbsp;</span>Safe
-                                                    /Traditional Photographer </label>
-                                                    <label> <input type="checkbox" />&nbsp;<span>Candid Photographer
-                                                        </span>
-                                                    </label>
-                                                    <label> <input type="checkbox" />&nbsp;<span>Safe /Traditional
-                                                            Videographer </span> </label>
-                                                    <label> <input type="checkbox" />&nbsp;<span>Candid Videographer
-                                                        </span>
-                                                    </label>
-
-
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label> Camera,Lens and other Equipment Details: </label></td>
-                                        <td>
-                                            <textarea id="description" name="description" placeholder="Add text"
-                                                value=" "></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            <div class="pay">
-                                                <label>Remuneration: </label>
-
-                                            </div>
-                                        </td>
-
-
-                                    <tr>
-                                        <td><label>Wedding + Reception:</label></td>
-                                        <td>
-                                            <input type="number">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Wedding only:</label></td>
-                                        <td>
-                                            <input type="number">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Reception/Haldi:</label></td>
-                                        <td>
-                                            <input type="number">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label> Pre Wedding /post Wedding:</label></td>
-                                        <td>
-                                            <input type="number">
-                                        </td>
+                                            <tr>
+                                                <td><label>ContactNumber: </label></td>
+                                                <td>
+                                                    <input type="number" name="contact">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>WhatsAppNumber: </label></td>
+                                                <td>
+                                                    <input type="number" name="whatsapp">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Email Id: </label></td>
+                                                <td>
+                                                    <input type="text" name="email" placeholder="example@gmail.com">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label> Location: </label></td>
+                                                <td>
 
 
 
+                                                    <select name="district" id="district">
+                                                        <option value="Select District" selected="selected">Select
+                                                            District
+                                                        </option>
+
+                                                        <option value="Alappuzha">Alappuzha</option>
+                                                        <option value="Ernakulam">Ernakulam</option>
+                                                        <option value="Idukki">Idukki</option>
+                                                        <option value="Kannur">Kannur</option>
+                                                        <option value="Kasaragod">Kasaragod</option>
+                                                        <option value="Kollam">Kollam</option>
+                                                        <option value="Kottayam">Kottayam</option>
+                                                        <option value="Kozhikode">Kozhikode</option>
+                                                        <option value="Malappuram">Malappuram</option>
+                                                        <option value="Palakkad">Palakkad</option>
+                                                        <option value="Pathanamthitta">Pathanamthitta</option>
+                                                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                                                        <option value="Thrissur">Thrissur</option>
+                                                        <option value="Wayanad">Wayanad</option>
+                                                    </select>
+
+                                                </td>
+
+                                            <tr>
+                                                <td><label>Shoot Category: </label></td>
+                                                <td>
+                                                    <div id="list1" class="dropdown-check-list" tabindex="100">
+
+                                                        <div class="checkboxes  checkbox-modal">
+                                                            <label></label><input
+                                                                type="checkbox" /><span>&nbsp;</span>Safe
+                                                            /Traditional Photographer </label>
+                                                            <label> <input type="checkbox" />&nbsp;<span>Candid
+                                                                    Photographer
+                                                                </span>
+                                                            </label>
+                                                            <label> <input type="checkbox" />&nbsp;<span>Safe
+                                                                    /Traditional
+                                                                    Videographer </span> </label>
+                                                            <label> <input type="checkbox" />&nbsp;<span>Candid
+                                                                    Videographer
+                                                                </span>
+                                                            </label>
 
 
-                                        </td>
-                                    </tr>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label> Camera,Lens and other Equipment Details: </label></td>
+                                                <td>
+                                                    <textarea id="description" name="description" placeholder="Add text"
+                                                        value=" "></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    <div class="pay">
+                                                        <label>Remuneration: </label>
+
+                                                    </div>
+                                                </td>
+
+
+                                            <tr>
+                                                <td><label>Wedding + Reception:</label></td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Wedding only:</label></td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Reception/Haldi:</label></td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label> Pre Wedding /post Wedding:</label></td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
 
 
 
-                                    <tr>
-
-                                        <td class="text-right align-middle">
-                                            <div class="btn-group">
-
-                                                <input type="submit"
-                                                    class="btn btn-secondary btn-lg btn-style-1 modal-btn" name="submit"
-                                                    onclick="validate()" value="Submit" /> &nbsp;&nbsp;
-
-                                            </div>
-                                        </td>
-
-                                        <td class="text-left align-middle">
-                                            <div class="btn-group">
-
-                                                <input type="reset"
-                                                    class="btn btn-secondary btn-lg btn-style-1 btns1b  modal-btn"
-                                                    onclick="validate()" value="Reset" />
 
 
-                                            </div>
-                                        </td>
+                                                </td>
+                                            </tr>
 
-                                    </tr>
-                                </table>
-                            </form>
+
+
+                                            <tr>
+
+                                                <td class="text-right align-middle">
+                                                    <div class="btn-group">
+
+                                                        <input type="submit"
+                                                            class="btn btn-secondary btn-lg btn-style-1 modal-btn"
+                                                            name="submit" onclick="validate()" value="Submit" />
+                                                        &nbsp;&nbsp;
+
+                                                    </div>
+                                                </td>
+
+                                                <td class="text-left align-middle">
+                                                    <div class="btn-group">
+
+                                                        <input type="reset"
+                                                            class="btn btn-secondary btn-lg btn-style-1 btns1b  modal-btn"
+                                                            onclick="validate()" value="Reset" />
+
+
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </form>
+                            </div>
+
                         </div>
-
-
                     </div>
                 </div>
 
