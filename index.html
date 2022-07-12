@@ -85,76 +85,60 @@
 
         function validate() {
 
-            var name = document.getElementById("name").value;
+            var name = document.getElementById("customername").value;
             if (name == "") {
                 alert("Enter the name");
                 return false;
             }
 
-            var contactnumber = document.getElementById("contactnumber").value;
+            var contactnumber = document.getElementById("customercontact").value;
             if (contactnumber == "") {
                 alert("Enter the Contact number");
                 return false;
             }
 
-            var whatsappnumber = document.reg_form.whatsappnumber;
-            var email = document.reg_form.email;
-            var location = document.reg_form.location;
-            var date = document.reg_form.date;
-            var event = document.reg_form.event;
-            var description = document.reg_form.description;
-            var budget = document.reg_form.budget;
-
-            if (name.value.length <= 0) {
-                alert("Name is required");
-                name.focus();
+            var whatsappnumber = document.getElementById("customerwhatsapp").value;
+            if (whatsappnumber == "") {
+                alert("Enter the Whatsapp number");
                 return false;
             }
-            if (contact.value.length <= 0) {
-                alert("Contact number is required");
-                contact.focus();
+
+            var email = document.getElementById("customeremail").value;
+            if (email== "") {
+                alert("Enter the Mail id");
                 return false;
             }
-            if (whatsapp.value.length <= 0) {
-                alert("Whatsapp number is required");
-                whatsapp.focus();
-                return false;
 
-
-                if (email.value.length <= 0) {
-                    alert("Email Id is required");
-                    email.focus();
-                    return false;
-                }
-                if (location.value.length <= 0) {
-                    alert("location is required");
-                    location.focus();
-                    return false;
-                }
-                if (date.value.length <= 0) {
-                    alert("date is required");
-                    date.focus();
-                    return false;
-                }
-                if (event.value == "select course") {
-                    alert("event is required");
-                    event.focus();
-                    return false;
-                }
-                return false;
-            }
-            var checkList = document.getElementById('list1');
-            checkList.getElementsByClassName('anchor')[0].onclick = function (evt) {
-                if (checkList.classList.contains('visible'))
-                    checkList.classList.remove('visible');
-                else
-                    checkList.classList.add('visible');
-            }
-
-            checkList.onblur = function (evt) {
-                checkList.classList.remove('visible');
-            }
+          
         }
+        function freelancervalidate() {
+
+var name = document.getElementById("freelancername").value;
+if (name == "") {
+    alert("Enter the name");
+    return false;
+}
+
+var contactnumber = document.getElementById("freelancercontact").value;
+if (contactnumber == "") {
+    alert("Enter the Contact number");
+    return false;
+}
+
+var whatsappnumber = document.getElementById("freelancerwhatsapp").value;
+if (whatsappnumber == "") {
+    alert("Enter the Whatsapp number");
+    return false;
+}
+var email = document.getElementById("freelanceremail").value;
+            if (email== "") {
+                alert("Enter the Mail id");
+                return false;
+            }
+
+
+}
+
 
         var freelancerStateObject = {
             India: {
@@ -1085,7 +1069,6 @@
             cursor: pointer;
         }
 
-
         .modal-content form {
             padding: 16px;
             border: 1px solid #ccc;
@@ -1121,22 +1104,11 @@
             height: 16px;
             width: 16px;
             margin-left: 8px;
-
         }
 
         textarea {
             height: 48px;
-
         }
-
-        pre {
-            background: greenyellow;
-            padding: 16px;
-            border-radius: 4px;
-            white-space: pre-wrap;
-            overflow: hidden;
-        }
-
         .contact-info {
             padding-bottom: 10px;
             width: 400px;
@@ -1160,14 +1132,11 @@
 
         #exampleModalLong-1 {
             font-size: medium;
-
             color: black;
         }
 
         .checkboxes input {
-
             vertical-align: middle;
-
         }
 
         .checkbox-modal {
@@ -1175,21 +1144,16 @@
         }
 
         .checkboxes label span {
-
             vertical-align: middle;
-
         }
 
         .pay {
             font-style: italic;
             font-size: larger;
-
         }
 
         h2 {
             text-align: center;
-
-
         }
 
         .bottom-align {
@@ -1211,7 +1175,6 @@
         #freelancer .btn-group {
             padding-top: 5px;
             width: 100%;
-
         }
 
         .modal-header .modal-title {
@@ -2156,25 +2119,25 @@
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label> Name: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="text" name="name" id="name" placeholder="Name">
+                                            <input type="text" name="name" id="customername" placeholder="Name">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label>ContactNumber: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="number" name="contact">
+                                            <input type="number" name="contact" id="customercontact">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label>WhatsAppNumber: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="number" name="whatsapp">
+                                            <input type="number" name="whatsapp" id="customerwhatsapp">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label>Email Id: </label></div>
-                                        <div class="col-md-6 col-sm-6 col-xl-6"><input type="text" name="email"
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><input type="text" id="customeremail" name="email"
                                                 placeholder="example@gmail.com"></div>
                                     </div>
                                     <div class="row">
@@ -2329,34 +2292,32 @@
 
 
 
-
-
                                 <form method="POST" action="https://sheetdb.io/api/v1/3mcbco6lea0qi"
-                                    id="freelancerForm">
+                                    id="freelancerForm" onsubmit="return freelancervalidate()">
 
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label> Name: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="text" name="name" placeholder="Name">
+                                            <input type="text" name="name" placeholder="Name" id="freelancername">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"> <label>ContactNumber: </label></div>
-                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input type="number" name="contact">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input type="number" name="contact" id="freelancercontact">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"> <label>WhatsAppNumber: </label></div>
 
-                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input type="number" name="whatsapp">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input type="number" name="whatsapp"id="freelancerwhatsapp">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"> <label>Email Id: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6"> <input type="text" name="email"
-                                                placeholder="example@gmail.com">
+                                                placeholder="example@gmail.com"id="freelanceremail">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -2470,22 +2431,22 @@
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6 align-middle">
                                             <div class="btn-group">
-
+                                                <div class="col-md-6 text-center">
                                                 <input type="submit"
                                                     class="btn btn-secondary btn-lg btn-style-1 modal-btn" name="submit"
-                                                    onclick="validate()" value="Submit" />
+                                                    onclick="return freelancervalidate()" value="Submit" />
                                                 &nbsp;&nbsp;
-
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xl-6  align-middle">
                                             <div class="btn-group">
-
+                                                <div class="col-md-6 Stext-center">
                                                 <input type="reset"
                                                     class="btn btn-secondary btn-lg btn-style-1  modal-btn"
-                                                    onclick="validate()" value="Reset" />
-
+                                                    onclick="freelancervalidate()" value="Reset" />
+                                                </div>
 
                                             </div>
                                         </div>
