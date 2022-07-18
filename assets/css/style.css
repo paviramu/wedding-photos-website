@@ -5891,6 +5891,9 @@ form.fbd-comment-form button {
     font-size: 16px;
     padding-top: 6px;
     border-radius: 5px; }
+  .single-insta-img img {
+    max-width: 100%;
+  }
 
 /*------------- Instacarousel Style 1 END -------------*/
 /*----------------------------------------*/
