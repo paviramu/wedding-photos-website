@@ -4,7 +4,7 @@
 <head>
     <!--- Basic Page Needs  -->
     <meta charset="utf-8">
-    <title>Potolia - Multipurpose Photography HTML Template</title>
+    <title>Eyeframes Photography</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
@@ -88,61 +88,92 @@
             var name = document.getElementById("customername").value;
             if (name == "") {
                 alert("Enter the name");
+                document.getElementById("customername").focus();
                 return false;
             }
 
             var contactnumber = document.getElementById("customercontact").value;
-            if (contactnumber == "") {
+            if (contactnumber == "" || contactnumber == null) {
                 alert("Enter the Contact number");
+                document.getElementById("customercontact").focus();
+                return false;
+            }
+
+            if (contactnumber.length < 10 || contactnumber.length > 10) {
+                alert("Mobile No. is not valid, Please Enter 10 Digit Mobile No.");
+                document.getElementById("customercontact").focus();
                 return false;
             }
 
             var whatsappnumber = document.getElementById("customerwhatsapp").value;
-            if (whatsappnumber == "") {
+            if (whatsappnumber == "" || whatsappnumber == null) {
                 alert("Enter the Whatsapp number");
+                document.getElementById("customerwhatsapp").focus();
+                return false;
+            }
+
+            if (whatsappnumber.length < 10 || whatsappnumber.length > 10) {
+                alert("Whatsapp mobile no. is not valid, Please Enter 10 Digit Mobile No.");
+                document.getElementById("customerwhatsapp").focus();
                 return false;
             }
 
             var email = document.getElementById("customeremail").value;
-            if (email== "") {
+            if (email == "") {
                 alert("Enter the Mail id");
+                document.getElementById("customeremail").focus();
                 return false;
             }
-          
+
         }
         function freelancervalidate() {
 
-                var name = document.getElementById("freelancername").value;
-                if (name == "") {
-                    alert("Enter the name");
-                    return false;
-                }
-
-                var contactnumber = document.getElementById("freelancercontact").value;
-                if (contactnumber == "") {
-                    alert("Enter the Contact number");
-                    return false;
-                }
-
-                var whatsappnumber = document.getElementById("freelancerwhatsapp").value;
-                if (whatsappnumber == "") {
-                    alert("Enter the Whatsapp number");
-                    return false;
-                }
-                var email = document.getElementById("freelanceremail").value;
-                if (email == "") {
-                    alert("Enter the Mail id");
-                    return false;
-                }
-
+            var name = document.getElementById("freelancername").value;
+            if (name == "") {
+                alert("Enter the name");
+                document.getElementById("freelancername").focus();
+                return false;
             }
 
-            function resetForms()
-            {
-                document.getElementById("customerForm").reset();
-                document.getElementById("freelancerForm").reset();
+            var contactnumber = document.getElementById("freelancercontactnumber").value;
 
+            if (contactnumber == "" || contactnumber == null) {
+                alert("Please enter your mobile No.");
+                document.getElementById("freelancercontactnumber").focus();
+                return false;
             }
+            if (contactnumber.length < 10 || contactnumber.length > 10) {
+                alert("Mobile No. is not valid, Please Enter 10 Digit Mobile No.");
+                document.getElementById("freelancercontactnumber").focus();
+                return false;
+            }
+
+
+            var whatsappnumber = document.getElementById("freelancerwhatsapp").value;
+            if (whatsappnumber == "" || whatsappnumber == null) {
+                alert("Enter the Whatsapp number");
+                document.getElementById("freelancerwhatsapp").focus();
+                return false;
+            }
+            if (whatsappnumber.length < 10 || whatsappnumber.length > 10) {
+                alert("Whatsapp mobile no. is not valid, Please Enter 10 Digit Mobile No.");
+                document.getElementById("freelancerwhatsapp").focus();
+                return false;
+            }
+            var email = document.getElementById("freelanceremail").value;
+            if (email == "") {
+                alert("Enter the Mail id");
+                document.getElementById("freelanceremail").focus();
+                return false;
+            }
+
+        }
+
+        function resetForms() {
+            document.getElementById("customerForm").reset();
+            document.getElementById("freelancerForm").reset();
+
+        }
 
 
         var freelancerStateObject = {
@@ -959,6 +990,7 @@
                     }).then(
                         response => response.json()
                     ).then((html) => {
+                        document.getElementById("customerForm").reset();
                         alert('Saved successfully');
                         window.location.href = "index.html";
                     });
@@ -975,6 +1007,7 @@
                     }).then(
                         response => response.json()
                     ).then((html) => {
+                        document.getElementById("freelancerForm").reset();
                         alert('Saved successfully');
                         window.location.href = "index.html";
                     });
@@ -1026,7 +1059,6 @@
 
     </script>
     <style>
-        
         /* The Modal (background) */
         .ebcf_modal {
             display: none;
@@ -1093,13 +1125,12 @@
         select {
             line-height: 24px;
             font-size: 14px;
-            border: 1px solid #ccc;
+            border: 1px solid black;
             border-radius: 2px;
         }
 
-        input,
-        select {
-            height: 24px;
+        .modal input, select {
+            height: 30px;
         }
 
         input[type="checkbox"],
@@ -1115,6 +1146,7 @@
         textarea {
             height: 48px;
         }
+
         .contact-info {
             padding-bottom: 10px;
             width: 400px;
@@ -1136,7 +1168,8 @@
             font-size: x-large;
         }
 
-        #exampleModalLong-1, #exampleModalLong-2 {
+        #exampleModalLong-1,
+        #exampleModalLong-2 {
             font-size: medium;
             color: black;
         }
@@ -1191,7 +1224,10 @@
         #freelancer {
             padding: 20px 20px 20px 20px;
         }
-        
+        #customerCountrySel,#customerStateSel,#customerDistrictSel,#freelancerdistrict{
+            padding: 2px 2px;
+        }
+       
     </style>
 </head>
 
@@ -1204,7 +1240,7 @@
         <div class="voidmega-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-xl-10">
+                    <div class="col-12 col-xl-10 col-sm-6">
 
 
                         <div class="vmm-header header-transparent-on vmm-mega-menu mega-menu-fullwidth">
@@ -1254,14 +1290,14 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
 
     </header>
     <!-- /Header Area -->
-    
+
     <!-- Secondary Menu area -->
     <div class="secondMenu_V1">
         <nav class="fotoliaCircular-menu">
@@ -1293,7 +1329,8 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="hero-text">
-                                            <h2 class="wow fadeIn" data-wow-delay=".25s">Everyone needs a go-to place or a go-to person</h2>
+                                            <h2 class="wow fadeIn" data-wow-delay=".25s">Everyone needs a go-to place or
+                                                a go-to person</h2>
 
                                             <div class="hero-btn">
 
@@ -1369,13 +1406,16 @@
             </div>
             <div class="hero-social">
                 <ul>
-                    <li class="wow fadeInUp" data-wow-delay=".35s"><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i
-                                class="fa fa-youtube" aria-hidden="true"></i><span>Youtube</span></a></li>
-                    <li class="wow fadeInUp" data-wow-delay=".55s"><a href="https://www.instagram.com/eyeframesphotography/"><i
-                                class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a></li>
-                    <li class="wow fadeInUp" data-wow-delay=".75s"><a href="https://www.facebook.com/Eyeframesphotography"><i
-                                class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a></li>
-                    
+                    <li class="wow fadeInUp" data-wow-delay=".35s"><a
+                            href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ" target="blank"><i class="fa fa-youtube"
+                                aria-hidden="true"></i><span>Youtube</span></a></li>
+                    <li class="wow fadeInUp" data-wow-delay=".55s"><a
+                            href="https://www.instagram.com/eyeframesphotography/" target="blank"><i class="fa fa-instagram"
+                                aria-hidden="true"></i><span>Instagram</span></a></li>
+                    <li class="wow fadeInUp" data-wow-delay=".75s"><a
+                            href="https://www.facebook.com/Eyeframesphotography" target="blank"><i class="fa fa-facebook"
+                                aria-hidden="true"></i><span>Facebook</span></a></li>
+
                 </ul>
             </div>
         </div>
@@ -1736,7 +1776,7 @@
                         <img src="assets/img/section-img/about-2-2.jpg" alt="" class="a3img-3 wow fadeInLeft"
                             data-wow-delay=".25s">
                     </div>
-    
+
                 </div>
                 <div class="col-md-6">
                     <div class="about-text">
@@ -1745,24 +1785,28 @@
                                 <p class="wow fadeInUp" data-wow-delay=".15s">About us</p>
                                 <h3 class="wow fadeInUp" data-wow-delay=".25s">Photography Is Great</h3>
                             </div>
-                            <p class="wow fadeInUp" data-wow-delay=".35s">We are a Technopark-based company providing photography and
+                            <p class="wow fadeInUp" data-wow-delay=".35s">We are a Technopark-based company providing
+                                photography and
                                 videography
                                 services
                                 according to your needs.</p>
                             <ul>
-                                <li class="wow fadeInUp" data-wow-delay=".45s">We provide the best photographers within your
+                                <li class="wow fadeInUp" data-wow-delay=".45s">We provide the best photographers within
+                                    your
                                     budget and
                                     taste. We are
                                     associated with thousands of photographers around Kerala.
                                 </li>
                                 <li class="wow fadeInUp" data-wow-delay=".55s">For that, we
                                     have our own team who will ensure that your expectations are met perfectly.</li>
-                                <li class="wow fadeInUp" data-wow-delay=".65s">From choosing the costumes for the shoot to
+                                <li class="wow fadeInUp" data-wow-delay=".65s">From choosing the costumes for the shoot
+                                    to
                                     delivery of
                                     the final
                                     product, our team will be there to assist you.</li>
                             </ul>
-                            <p class="wow fadeInUp" data-wow-delay=".75s">We know it's our responsibility to deliver your
+                            <p class="wow fadeInUp" data-wow-delay=".75s">We know it's our responsibility to deliver
+                                your
                                 special
                                 memories as special as they are. </p>
                             <a href="#" class="btn-style-1 wow fadeInUp" data-wow-delay=".85s">Contact Us</a>
@@ -1794,10 +1838,13 @@
                             <h4>Steabin Robertson</h4>
                             <p>CEO & Founder</p>
                             <ul class="team-social">
-                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram" aria-hidden="true"></i></a></li>
-                               
+                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i
+                                            class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram"
+                                            aria-hidden="true"></i></a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1811,9 +1858,12 @@
                             <h4>Steabin Robertson</h4>
                             <p>CEO & Founder</p>
                             <ul class="team-social">
-                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                              <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                 <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i
+                                            class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram"
+                                            aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -1827,10 +1877,13 @@
                             <h4>Steabin Robertson</h4>
                             <p>CEO & Founder</p>
                             <ul class="team-social">
-                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram" aria-hidden="true"></i></a></li>
-                               
+                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i
+                                            class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram"
+                                            aria-hidden="true"></i></a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1844,10 +1897,13 @@
                             <h4>Steabin Robertson</h4>
                             <p>CEO & Founder</p>
                             <ul class="team-social">
-                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram" aria-hidden="true"></i></a></li>
-                               
+                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i
+                                            class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram"
+                                            aria-hidden="true"></i></a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1861,10 +1917,13 @@
                             <h4>Steabin Robertson</h4>
                             <p>CEO & Founder</p>
                             <ul class="team-social">
-                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram" aria-hidden="true"></i></a></li>
-                               
+                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i
+                                            class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram"
+                                            aria-hidden="true"></i></a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1878,10 +1937,13 @@
                             <h4>Steabin Robertson</h4>
                             <p>CEO & Founder</p>
                             <ul class="team-social">
-                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram" aria-hidden="true"></i></a></li>
-                               
+                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i
+                                            class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram"
+                                            aria-hidden="true"></i></a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1895,10 +1957,13 @@
                             <h4>Steabin Robertson</h4>
                             <p>CEO & Founder</p>
                             <ul class="team-social">
-                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram" aria-hidden="true"></i></a></li>
-                               
+                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i
+                                            class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram"
+                                            aria-hidden="true"></i></a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1912,10 +1977,13 @@
                             <h4>Steabin Robertson</h4>
                             <p>CEO & Founder</p>
                             <ul class="team-social">
-                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram" aria-hidden="true"></i></a></li>
-                               
+                                <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i
+                                            class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/eyeframesphotography"><i class="bi-instagram"
+                                            aria-hidden="true"></i></a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -2107,28 +2175,34 @@
 
 
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xl-6"><label> Name: </label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label class="form-label"> Name: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="text" name="name" id="customername" placeholder="Name">
+                                            <input  type="text" name="name" id="customername" placeholder="Name">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label>ContactNumber: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="number" name="contact" id="customercontact">
+                                            <input  type="number" name="contact"
+                                                id="customercontact">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label>WhatsAppNumber: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="number" name="whatsapp" id="customerwhatsapp">
+                                            <input type="number" name="whatsapp"
+                                                id="customerwhatsapp">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label>Email Id: </label></div>
-                                        <div class="col-md-6 col-sm-6 col-xl-6"><input type="text" id="customeremail" name="email"
-                                                placeholder="example@gmail.com"></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6">
+                                            <input type="text"  name="email"
+                                                placeholder="example@gmail.com" id="customeremail"
+                                                pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label> Location: </label></div>
@@ -2137,7 +2211,7 @@
                                                 <option value="" selected="selected">Select Country</option>
                                             </select>
 
-                                            Select State: <select name="countrya" id="customerStateSel" size="1">
+                                            Select State: <select name="country" id="customerStateSel" size="1">
                                                 <option value="" selected="selected">Please select Country first
                                                 </option>
                                             </select>
@@ -2167,12 +2241,14 @@
                                                 <div class="checkboxes checkbox-modal">
 
                                                     <label><input type="checkbox" />&nbsp;<span> Wedding
-                                                        </span><input type="checkbox" />&nbsp;<span>Engagement</span></label>
+                                                        </span><input
+                                                            type="checkbox" />&nbsp;<span>Engagement</span></label>
                                                     <label><input type="checkbox" />&nbsp;<span>Baby/Maternity shoot
                                                         </span></label>
 
-                                                        <label><input type="checkbox" />&nbsp;<span>House Warming/Architecture</span></label>
-                                                    
+                                                    <label><input type="checkbox" />&nbsp;<span>House
+                                                            Warming/Architecture</span></label>
+
                                                     <label> <input type="checkbox" />&nbsp;<span>Event shoot
                                                         </span><input type="checkbox" />&nbsp;<span>Industrial
                                                             shoot</span></label>
@@ -2223,12 +2299,12 @@
                                                 <input type="submit"
                                                     class="btn btn-secondary btn-lg btn-style-1 modal-btn" name="submit"
                                                     onclick="return validate()" value="Submit" />
-                                              
+
 
                                             </div>
                                         </div>
 
-                                        
+
                                     </div>
 
 
@@ -2260,7 +2336,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Freelancer</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"  onclick="resetForms()">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="resetForms()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -2272,32 +2348,40 @@
 
 
 
-                                <form method="POST" action="https://sheetdb.io/api/v1/3mcbco6lea0qi"
-                                    id="freelancerForm" onsubmit="return freelancervalidate()">
+                                <form method="POST" action="https://sheetdb.io/api/v1/3mcbco6lea0qi" id="freelancerForm"
+                                    onsubmit="return freelancervalidate()">
 
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label> Name: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="text" name="name" placeholder="Name" id="freelancername">
+                                            <input  type="text" name="name"
+                                                placeholder="Name" id="freelancername">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"> <label>ContactNumber: </label></div>
-                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input type="number" name="contact" id="freelancercontact">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input
+                                                type="number" name="contact"
+                                                id="freelancercontactnumber">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"> <label>WhatsAppNumber: </label></div>
 
-                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input type="number" name="whatsapp"id="freelancerwhatsapp">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input
+                                                 type="number" name="whatsapp"
+                                                id="freelancerwhatsapp">
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xl-6"> <label>Email Id: </label></div>
-                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input type="text" name="email"
-                                                placeholder="example@gmail.com"id="freelanceremail">
+                                        <div class="col-md-6 col-sm-6 col-xl-6"> <label for="formFileLg"
+                                                class="form-label">Email Id: </label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6">
+                                            <input type="text" name="email"
+                                                placeholder="example@gmail.com" id="freelanceremail"
+                                                pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -2305,7 +2389,7 @@
 
                                         <div class="col-md-6 col-sm-6 col-xl-6">
 
-                                            <select name="district" id="district">
+                                            <select name="district" id="freelancerdistrict">
                                                 <option value="Select District" selected="selected">Select
                                                     District
                                                 </option>
@@ -2361,9 +2445,11 @@
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <textarea id="description" name="description" placeholder="Add text"
-                                                value=" "></textarea>
-                                        </div>
+                                            <textarea id="comment" placeholder="Add Your Comment" value=" "></textarea>
+                                        </div>                                
+
+
+                                       
                                     </div>
 
 
@@ -2375,7 +2461,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xl-6"> Wedding + Reception:</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label>Wedding + Reception:</label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
                                             <input type="number">
                                         </div>
@@ -2411,27 +2497,27 @@
                                     <div class="row">
                                         <div class="col-md-12 text-center">
                                             <div class="btn-group">
-                                                
+
                                                 <input type="submit"
                                                     class="btn btn-secondary btn-lg btn-style-1 modal-btn" name="submit"
                                                     onclick="return freelancervalidate()" value="Submit" />
-                                                </div>
                                             </div>
                                         </div>
-
-                                       
-
                                     </div>
 
-                                </form>
+
+
                             </div>
 
+                            </form>
                         </div>
+
                     </div>
                 </div>
-
             </div>
+
         </div>
+    </div>
     </div>
 
     <!--/Freelancer Area-->
@@ -2443,20 +2529,20 @@
             <div class="col-md-12">
                 <div class="footer-copyr-logo">
 
-                   
+
 
                     <img src="assets/img/logo1.png" alt="">
-                    <p>© 2022 All rights reserved by VoidCodersTM</p>
+                    <p>© 2022 All rights reserved by Eyeframes</p>
                 </div>
                 <div class="footer-social">
                     <ul>
-                        <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ"><i class="fa fa-youtube"
-                            aria-hidden="true"></i></a></li>
-                <li><a href="https://www.instagram.com/eyeframesphotography/"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
+                        <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ" target="blank"><i class="fa fa-youtube"
                                     aria-hidden="true"></i></a></li>
-                        
+                        <li><a href="https://www.instagram.com/eyeframesphotography/" target="blank"><i class="fa fa-instagram"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/Eyeframesphotography" target="blank"><i class="fa fa-facebook"
+                                    aria-hidden="true"></i></a></li>
+
                     </ul>
                 </div>
             </div>
