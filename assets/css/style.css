@@ -154,11 +154,7 @@ img {
   max-width: 15%;
 }
 
-.single-insta-img img {
-  object-fit: cover;
-  width: 240px;
-  height: 210px;
-}
+
 button,
 input,
 textarea {
