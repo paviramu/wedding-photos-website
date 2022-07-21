@@ -7200,6 +7200,9 @@ form.cf button {
     all: unset;
     position: relative; } }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .vmm-header .logo img {
+    height: 50px !important;
+  }
   .ap3 .section-padding {
     padding-bottom: 0px; }
 
@@ -7285,6 +7288,9 @@ form.cf button {
     font-size: 16px;
     line-height: 22px; } }
 @media only screen and (min-width: 768px) and (max-width: 850px) {
+  .vmm-header .logo img {
+    height: 50px !important;
+  }
   .hero-16 .scroll-down {
     bottom: 70px; }
 
@@ -7292,6 +7298,9 @@ form.cf button {
     position: relative;
     padding-top: 25px; } }
 @media only screen and (max-width: 767px) {
+  .vmm-header .logo img {
+    height: 50px !important;
+  }
   .hero_V18 .hero-content .hero-text {
     max-width: 350px; }
 
@@ -7852,6 +7861,9 @@ form.cf button {
   .hero19-carousel .owl-dots {
     right: 0px !important; } }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
+  .vmm-header .logo img {
+    height: 50px !important;
+  }
   .revSlideHero .Newspaper-Button {
     padding: 8px 12px !important;
     bottom: 0;
