@@ -58,9 +58,6 @@
         <![endif]-->
 
     <script>
-
-
-
         function displayRadioValue() {
             var ele = document.getElementsByName('user');
             document.getElementById('contactus').style.display = "none";
@@ -124,7 +121,19 @@
                 document.getElementById("customeremail").focus();
                 return false;
             }
-
+            var selDate = document.getElementById("meeting-time").value;
+            if (selDate == "") {
+                alert("Select the Date");
+                return false;
+            }
+            else {
+                var today = new Date();
+                var selectedDate = new Date(document.getElementById("meeting-time").valueAsNumber);
+                if (selectedDate < today) {
+                    alert("Select only future dates");
+                    return false;
+                }
+            }
         }
         function freelancervalidate() {
 
@@ -978,8 +987,6 @@
             },
         };
         window.onload = function () {
-
-
             var form = document.getElementById('customerForm');
             if (form != null) {
                 form.addEventListener("submit", e => {
@@ -1129,7 +1136,8 @@
             border-radius: 2px;
         }
 
-        .modal input, select {
+        .modal input,
+        select {
             height: 30px;
         }
 
@@ -1224,10 +1232,13 @@
         #freelancer {
             padding: 20px 20px 20px 20px;
         }
-        #customerCountrySel,#customerStateSel,#customerDistrictSel,#freelancerdistrict{
+
+        #customerCountrySel,
+        #customerStateSel,
+        #customerDistrictSel,
+        #freelancerdistrict {
             padding: 2px 2px;
         }
-        
     </style>
 </head>
 
@@ -1407,14 +1418,14 @@
             <div class="hero-social">
                 <ul>
                     <li class="wow fadeInUp" data-wow-delay=".35s"><a
-                            href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ" target="blank"><i class="fa fa-youtube"
-                                aria-hidden="true"></i><span>Youtube</span></a></li>
+                            href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ" target="blank"><i
+                                class="fa fa-youtube" aria-hidden="true"></i><span>Youtube</span></a></li>
                     <li class="wow fadeInUp" data-wow-delay=".55s"><a
-                            href="https://www.instagram.com/eyeframesphotography/" target="blank"><i class="fa fa-instagram"
-                                aria-hidden="true"></i><span>Instagram</span></a></li>
+                            href="https://www.instagram.com/eyeframesphotography/" target="blank"><i
+                                class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a></li>
                     <li class="wow fadeInUp" data-wow-delay=".75s"><a
-                            href="https://www.facebook.com/Eyeframesphotography" target="blank"><i class="fa fa-facebook"
-                                aria-hidden="true"></i><span>Facebook</span></a></li>
+                            href="https://www.facebook.com/Eyeframesphotography" target="blank"><i
+                                class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a></li>
 
                 </ul>
             </div>
@@ -1843,7 +1854,7 @@
                                 <li><a href="https://www.facebook.com/Eyeframesphotography"><i class="fa fa-facebook"
                                             aria-hidden="true"></i></a></li>
                                 <li><a href="https://www.instagram.com/eyeframesphotography/"><i class="fa fa-instagram"
-                                    aria-hidden="true"></i></a></li>
+                                            aria-hidden="true"></i></a></li>
 
                             </ul>
                         </div>
@@ -2175,31 +2186,30 @@
 
 
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xl-6"><label class="form-label"> Name: </label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label class="form-label"> Name:
+                                            </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input  type="text" name="name" id="customername" placeholder="Name">
+                                            <input type="text" name="name" id="customername" placeholder="Name">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label>ContactNumber: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input  type="number" name="contact"
-                                                id="customercontact">
+                                            <input type="number" name="contact" id="customercontact">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label>WhatsAppNumber: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="number" name="whatsapp"
-                                                id="customerwhatsapp">
+                                            <input type="number" name="whatsapp" id="customerwhatsapp">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label>Email Id: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="text"  name="email"
-                                                placeholder="example@gmail.com" id="customeremail"
+                                            <input type="text" name="email" placeholder="example@gmail.com"
+                                                id="customeremail"
                                                 pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
 
                                         </div>
@@ -2228,8 +2238,8 @@
                                                 for the Event:</label>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="datetime-local" id="meeting-time" name="meeting-time"
-                                                value="2021-06-12T19:30" min="2000-01-01T00:00" max="2050-06-14T00:00">
+                                            <input type="datetime-local" name="date" id="meeting-time"
+                                                name="meeting-time" min="2022-07-01T00:00" max="2050-06-14T00:00">
 
                                         </div>
                                     </div>
@@ -2240,29 +2250,36 @@
 
                                                 <div class="checkboxes checkbox-modal">
 
-                                                    <label><input type="checkbox" />&nbsp;<span> Wedding
-                                                        </span><input
-                                                            type="checkbox" />&nbsp;<span>Engagement</span></label>
-                                                    <label><input type="checkbox" />&nbsp;<span>Baby/Maternity shoot
+                                                    <label><input type="checkbox" name="wedding" />&nbsp;<span> Wedding
+                                                        </span><input type="checkbox"
+                                                            name="engagement" />&nbsp;<span>Engagement</span></label>
+                                                    <label><input type="checkbox"
+                                                            name="babyMaternityShoot" />&nbsp;<span>Baby/Maternity shoot
                                                         </span></label>
 
-                                                    <label><input type="checkbox" />&nbsp;<span>House
+                                                    <label><input type="checkbox"
+                                                            name="houseWarming" />&nbsp;<span>House
                                                             Warming/Architecture</span></label>
 
-                                                    <label> <input type="checkbox" />&nbsp;<span>Event shoot
-                                                        </span><input type="checkbox" />&nbsp;<span>Industrial
+                                                    <label> <input type="checkbox" name="eventShoot" />&nbsp;<span>Event
+                                                            shoot
+                                                        </span><input type="checkbox"
+                                                            name="industrialShoot" />&nbsp;<span>Industrial
                                                             shoot</span></label>
 
-                                                    <label><input type="checkbox" />&nbsp;<span>Portfolio
+                                                    <label><input type="checkbox"
+                                                            name="portfolioShoot" />&nbsp;<span>Portfolio
                                                             shoot</span>
-                                                        <input type="checkbox" /> &nbsp;<span>Product
+                                                        <input type="checkbox" name="productShoot" />
+                                                        &nbsp;<span>Product
                                                             shoot</span></label>
 
 
 
                                                     <label>
-                                                        <input type="checkbox" />&nbsp;<span> Family
-                                                            shoot</span><input type="checkbox" />&nbsp;
+                                                        <input type="checkbox" name="familyShoot" />&nbsp;<span> Family
+                                                            shoot</span><input type="checkbox"
+                                                            name="automobileShoot" />&nbsp;
                                                         <span>Automobile shoot
                                                         </span></label>
 
@@ -2277,7 +2294,8 @@
                                                 Description box:
                                             </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6 bottom-align">
-                                            <textarea id="" placeholder="Add Your Comment" value=" "></textarea>
+                                            <textarea id="" name="description" placeholder="Add Your Comment"
+                                                value=" "></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -2285,7 +2303,7 @@
                                                 Details:
                                             </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6 bottom-align">
-                                            <input type="number">
+                                            <input type="number" name="expectingBudget">
                                         </div>
                                     </div>
 
@@ -2355,23 +2373,20 @@
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"><label> Name: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input  type="text" name="name"
-                                                placeholder="Name" id="freelancername">
+                                            <input type="text" name="name" placeholder="Name" id="freelancername">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"> <label>ContactNumber: </label></div>
-                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input
-                                                type="number" name="contact"
+                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input type="number" name="contact"
                                                 id="freelancercontactnumber">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xl-6"> <label>WhatsAppNumber: </label></div>
 
-                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input
-                                                 type="number" name="whatsapp"
+                                        <div class="col-md-6 col-sm-6 col-xl-6"> <input type="number" name="whatsapp"
                                                 id="freelancerwhatsapp">
                                         </div>
                                     </div>
@@ -2379,8 +2394,8 @@
                                         <div class="col-md-6 col-sm-6 col-xl-6"> <label for="formFileLg"
                                                 class="form-label">Email Id: </label></div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="text" name="email"
-                                                placeholder="example@gmail.com" id="freelanceremail"
+                                            <input type="text" name="email" placeholder="example@gmail.com"
+                                                id="freelanceremail"
                                                 pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
                                         </div>
                                     </div>
@@ -2389,7 +2404,7 @@
 
                                         <div class="col-md-6 col-sm-6 col-xl-6">
 
-                                            <select name="district" id="freelancerdistrict">
+                                            <select name="location" id="freelancerdistrict">
                                                 <option value="Select District" selected="selected">Select
                                                     District
                                                 </option>
@@ -2420,16 +2435,20 @@
                                             <div id="list1" class="dropdown-check-list" tabindex="100">
 
                                                 <div class="checkboxes  checkbox-modal">
-                                                    <label></label><input type="checkbox" /><span>&nbsp;</span>Safe
+                                                    <label></label><input type="checkbox"
+                                                        name="safeTraditionalPhotographer" /><span>&nbsp;</span>Safe
                                                     /Traditional Photographer </label>
-                                                    <label> <input type="checkbox" />&nbsp;<span>Candid
+                                                    <label> <input type="checkbox"
+                                                            name="candidPhotographer" />&nbsp;<span>Candid
                                                             Photographer
                                                         </span>
                                                     </label>
-                                                    <label> <input type="checkbox" />&nbsp;<span>Safe
+                                                    <label> <input type="checkbox"
+                                                            name="safeTraditionalVideographer" />&nbsp;<span>Safe
                                                             /Traditional
                                                             Videographer </span> </label>
-                                                    <label> <input type="checkbox" />&nbsp;<span>Candid
+                                                    <label> <input type="checkbox"
+                                                            name="candidVideographer" />&nbsp;<span>Candid
                                                             Videographer
                                                         </span>
                                                     </label>
@@ -2445,11 +2464,12 @@
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <textarea id="comment" placeholder="Add Your Comment" value=" "></textarea>
-                                        </div>                                
+                                            <textarea id="comment" name="comment" placeholder="Add Your Comment"
+                                                value=" "></textarea>
+                                        </div>
 
 
-                                       
+
                                     </div>
 
 
@@ -2461,9 +2481,10 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xl-6"><label>Wedding + Reception:</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xl-6"><label>Wedding + Reception:</label>
+                                        </div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="number">
+                                            <input type="number" name="weddingReception">
                                         </div>
                                     </div>
 
@@ -2472,7 +2493,7 @@
                                             <label>Wedding only:</label>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="number">
+                                            <input type="number" name="wedding">
                                         </div>
                                     </div>
 
@@ -2481,7 +2502,7 @@
                                             <label>Reception/Haldi:</label>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="number">
+                                            <input type="number" name="ReceptionHaldi">
                                         </div>
                                     </div>
 
@@ -2490,7 +2511,7 @@
                                             <label> Pre Wedding /post Wedding:</label>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xl-6">
-                                            <input type="number">
+                                            <input type="number" name="prePostwedding">
                                         </div>
                                     </div>
 
@@ -2536,12 +2557,12 @@
                 </div>
                 <div class="footer-social">
                     <ul>
-                        <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ" target="blank"><i class="fa fa-youtube"
-                                    aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.instagram.com/eyeframesphotography/" target="blank"><i class="fa fa-instagram"
-                                    aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.facebook.com/Eyeframesphotography" target="blank"><i class="fa fa-facebook"
-                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcCoRCx_X5RRXurDLw31XTQ" target="blank"><i
+                                    class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/eyeframesphotography/" target="blank"><i
+                                    class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/Eyeframesphotography" target="blank"><i
+                                    class="fa fa-facebook" aria-hidden="true"></i></a></li>
 
                     </ul>
                 </div>
