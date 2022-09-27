@@ -1246,6 +1246,18 @@
 
 /* -------------------------------- */
 
+@media (max-width: 375px) {
+	.vmm-header {
+		width: 75%;
+	}
+}
+
+@media (min-width: 376px) and (max-width: 500px) {
+	.vmm-header {
+		width: 84%;
+	}
+}
+
 
 @media (max-width: 1200px) {
 	.voidmega-header .vmm-menu li.mega-menu > ul {

@@ -7972,6 +7972,14 @@ color: white; }
     .about14-2 .section-text h3 {
       font-size: 22px;
       line-height: 34px; } }
+
+@media only screen and (max-width: 500px) {
+.hero_V2 {
+  background-image: url(../img/bg/home_mobile.jpg);
+}
+}
+
+
 @media only screen and (max-width: 359px) {
   .hero_V13 .hss-V13thumbs .item .hss-thumbs {
     padding: 15px 5px; }
