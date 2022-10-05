@@ -1246,18 +1246,25 @@
 
 /* -------------------------------- */
 
-@media (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 500px) {
 	.vmm-header {
-		width: 75%;
+		width: 95%;
+	}
+
+	.sdc-img img {
+		width: -webkit-fill-available;
+	}
+
+	.text-one, .text-two, .text-three, .text-four, .text-one a, .text-two a {
+		font-size: 8px !important;
 	}
 }
 
-@media (min-width: 376px) and (max-width: 500px) {
-	.vmm-header {
-		width: 84%;
+@media (min-width: 768px) {
+	.sdc-img img {
+		width: -webkit-fill-available;
 	}
 }
-
 
 @media (max-width: 1200px) {
 	.voidmega-header .vmm-menu li.mega-menu > ul {
