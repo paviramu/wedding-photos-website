@@ -7977,6 +7977,10 @@ color: white; }
 .hero_V2 {
   background-image: url(../img/bg/home_mobile.jpg);
 }
+
+.testimonial-area {
+  background-image: url(../img/bg/testimonial-mobile.jpg);
+}
 }
 
 
